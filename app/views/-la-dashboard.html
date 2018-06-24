@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Local Authority - Dashboard
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+	 <div class="grid-row">
+  <div class="column-full column-minimum">   
+	  
+	  <!--notifications and my account -->
+	  <div class="notification-myaccount"> <div class="dropdown ">
+  <button class="dropbtn notification"></button>
+  <div class="dropdown-content">
+    <a href="la-directions.html">Application #0005361 approved and Standard Direction issued</a>
+    <a href="05-case-view-documents">New document uploaded</a>
+    <a href="#">Question from Judge</a>
+  </div>
+  
+</div>
+<div class="dropdown">
+  <button class="dropbtn my-account"></button>
+  <div class="dropdown-content">
+    <a href="#">My Account</a>
+    <a href="#">Change Password</a>
+    <a href="00-la-sign-in">Sign Out </a>
+  </div>
+  
+</div></div>
+	  
+	  <br/>
+	  
+  <h1 class="govuk-heading-l">
+   Dashboard <span class="govuk-caption-m"> Welcome Joe Bloggs (Local Authority Admin)</span>
+</h1>
+	  
+	  <!--<h1 class="heading-large">  Dashboard </h1>
+	  <p class="grey-text"> Welcome Joe Bloggs (Local Authority Admin)</p>-->
+    <div class="grid-row">
+      <div class="column-one-half dashboard-box-link">
+       <a href="la-cases" > <div class="govuk-box-highlight" align="left";>
+          
+          <p class="font-large"> 33 <br>
+            <strong class="bold">Cases</strong> </p>
+		      <p class="font-small">View and edit cases </p>
+        </div></a>
+      </div>
+      <div class="column-one-half dashboard-box-link">
+       <a href="-la-applications.html" style=" text-decoration: none;"> <div class="govuk-box-highlight">
+          
+          <p class="font-large"> 03 <br>
+            <strong class="bold"> Applications</strong> </p>
+		   <p class="font-small">Complete or start a new application </p>
+		   </div></a>
+      </div>
+    </div>
+	  <div class="grid-row">
+	   <div class="column-one-half dashboard-box-link">
+ <a href="-la-directions" > <div class="govuk-box-highlight">
+        
+        <p class="font-large">
+          05 <br>
+          <strong class="bold">Directions</strong>
+        </p>
+	  <p class="font-small">View Directions </p>
+	 </div></a>
+  </div>
+
+  <div class="column-one-half dashboard-box-link">
+  <a href="-la-accounts" >  <div class="govuk-box-highlight dashboard-box-link">
+        
+        <p class="font-large">
+          04 <br>
+          <strong class="bold">Accounts</strong>
+        </p>
+		<p class="font-small">Manage Account details </p>
+	  </div></a>
+  </div>
+
+</div>
+    
+    
+  </div></div>
+  </div>
+</main>
+{% endblock %} 

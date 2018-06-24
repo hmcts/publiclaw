@@ -1,0 +1,214 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+C110a - Urgency
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+
+<a href="-c110a.html" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="-c110a-review">
+
+{% else %}
+
+  <form action="-c110a">
+{% endif %}
+
+<h1 class="govuk-heading-l">
+<!--Do you need hearing in next 24 hours?-->When do you need a hearing?
+</h1>
+
+
+    <div class="form-group">
+    <fieldset>
+
+      <legend>
+        <span class="body-text"> Do you need an urgent hearing? </span>
+      </legend>
+
+      <div class="multiple-choice" data-target="urgent-yes">
+        <input id="radio-home-address" type="radio" name="urgent-type" value="Yes" {{ checked('urgent-type','Yes') }}>
+        <label for="radio-home-address">Yes </label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="urgent-yes">
+
+        <!-- reason -->
+        <div class="form-group">
+          <label class="form-label" for="applicant-full-name">
+             Please give time and dates for consideration
+            <span class="form-hint">For example, With in 24 hours as the child is being released from hospital tomorrow</span>
+          </label>
+          <input type="text" class="form-control" id="full-name-applicant" name="urgency-date" value="{{ data['urgency-date'] }}">
+        </div>
+<div >
+
+        <legend>
+
+          <span class="body-text">Set out the reasons for urgency</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="urgency-reason" rows="4" cols="80">{{ data['urgency-reason'] }}</textarea>
+
+</div>
+
+
+</div>
+      <div class="multiple-choice" >
+       <input id="radio-other-address" type="radio" name="urgent-type" value="No" {{ checked('urgent-type','No') }}>
+        <label for="radio-other-address">No  </label>
+      </div>
+
+
+    </fieldset>
+  </div>
+
+  <div class="form-group">
+  <fieldset>
+
+    <legend>
+      <span class="body-text"> Do you need hearing without notice? </span>
+    </legend>
+
+    <div class="multiple-choice" data-target="without-notice-yes">
+      <input id="radio-home-address" type="radio" name="without-notice" value="Yes" {{ checked('without-notice','Yes') }}>
+      <label for="radio-home-address">Yes </label>
+    </div>
+
+    <div class="panel panel-border-narrow js-hidden" id="without-notice-yes">
+
+      <!-- reason-->
+      <div class="form-group">
+
+
+
+      <legend>
+
+        <span class="body-text">Set out the reasons for hearing without notice</span>
+      </legend>
+<textarea class="form-control" type="text" id="without-notice" name="without-notice-reason" rows="4" cols="80">{{ data['without-notice-reason'] }}</textarea>
+
+</div>
+
+
+</div>
+    <div class="multiple-choice" >
+     <input id="radio-other-address" type="radio" name="without-notice" value="No" {{ checked('without-notice','No') }}>
+      <label for="radio-other-address">No  </label>
+    </div>
+
+
+  </fieldset>
+</div>
+<div class="form-group">
+<fieldset>
+
+  <legend>
+    <span class="body-text"> Do you need hearing with reduced notice? </span>
+  </legend>
+
+  <div class="multiple-choice" data-target="reduced-notice-yes">
+    <input id="radio-home-address" type="radio" name="reduced-notice" value="Yes" {{ checked('reduced-notice','Yes') }}>
+    <label for="radio-home-address">Yes </label>
+  </div>
+
+  <div class="panel panel-border-narrow js-hidden" id="reduced-notice-yes">
+
+    <!-- reason-->
+    <div class="form-group">
+
+
+
+    <legend>
+
+      <span class="body-text">Set out the reasons for reduced notice hearing </span>
+    </legend>
+<textarea class="form-control" type="text" id="reduced-notice" name="reduced-notice-reason" rows="4" cols="80">{{ data['reduced-notice-reason'] }}</textarea>
+
+</div>
+
+
+</div>
+  <div class="multiple-choice" >
+   <input id="radio-other-address" type="radio" name="reduced-notice" value="No" {{ checked('reduced-notice','No') }}>
+    <label for="radio-other-address">No  </label>
+  </div>
+
+
+</fieldset>
+</div>
+<div class="form-group">
+<fieldset>
+
+  <legend>
+    <span class="body-text"> Are respondents aware of proceedings? </span>
+  </legend>
+
+  <div class="multiple-choice" data-target="respondents-notified-yes">
+    <input id="radio-home-address" type="radio" name="respondents-notified" value="Yes" {{ checked('respondents-notified','Yes') }}>
+    <label for="radio-home-address">Yes </label>
+  </div>
+
+  <div class="panel panel-border-narrow js-hidden" id="respondents-notified-yes">
+
+    <!-- reason-->
+    <div class="form-group">
+
+
+
+    <legend>
+
+      <span class="body-text">Specify respondents’ views on proceedings</span>
+    </legend>
+<textarea class="form-control" type="text" id="reduced-notice" name="respondents-notified-reason" rows="4" cols="80">{{ data['respondents-notified-reason'] }}</textarea>
+
+</div>
+
+
+</div>
+  <div class="multiple-choice" >
+   <input id="radio-other-address" type="radio" name="respondents-notified" value="No" {{ checked('respondents-notified','No') }}>
+    <label for="radio-other-address">No  </label>
+  </div>
+
+
+</fieldset>
+</div>
+
+{% if data['change'] == "true" %}
+  <input class="button" type="submit" value="Save and continue">
+
+{% else %}
+
+<input class="button" type="submit" value="Save">
+{% endif %}
+
+</form>
+
+
+
+
+
+	  <hr />
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

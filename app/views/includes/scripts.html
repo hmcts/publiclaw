@@ -1,0 +1,108 @@
+<!-- Javascript -->
+<!--[if lte IE 8]><script src="/public/javascripts/bind.js"></script><![endif]-->
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/public/javascripts/application.js"></script>
+<script src="/public/javascripts/application_old.js"></script>
+
+<script src="/public/javascripts/task-list.js"></script>
+<script src="https://publiclawtest.herokuapp.com/public/javascripts/govuk/shim-links-with-button-role.js"></script>
+<script src="https://publiclawtest.herokuapp.com/public/javascripts/govuk/show-hide-content.js"></script>
+
+<script src="/public/javascripts/cookie-banner.js"></script>
+<script src="/public/javascripts/all.js"></script>
+<script>window.GOVUKFrontend.initAll()</script>
+<script></script>
+
+{% if useAutoStoreData %}
+  <script src="/public/javascripts/auto-store-data.js"></script>
+<script src="/public/javascripts/application-nav.js"></script>
+{% endif %}
+
+<style>
+	
+	.dashboard-box-link a .govuk-box-highlight p{color: #fff !important;}
+	
+	.govuk-width-container{margin: 0px; width: 100%; max-width: 100%; } #content{margin: 0px; 0; padding: 20px;} .govuk-main-wrapper{padding: 0px;} .govuk-template__body{width: 100%; margin: 0px; padding: 0px; margin: 0;
+    background-color: #ffffff;}
+    #content{padding-top: 0px}
+    .govuk-footer {padding: 20px;}
+
+/* ==========================================================================
+   #CASE BAR
+   ========================================================================== */
+.jui-casebar {
+  background-color: #005ea5;
+  color: #ffffff;
+  padding: 10px 20px;
+  height: 20px; font-family: sans-serif;
+  font-size: 80%;
+}
+
+.jui-casebar:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media (max-width: 40.0525em) {
+  .jui-casebar__options {
+    margin-top: 10px;
+  }
+  .jui-casebar__options:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .jui-casebar__details {
+    float: left;
+  }
+  .jui-casebar__options {
+    float: right;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+}
+
+.jui-casebar__title {
+  font-weight: bold;
+  margin-left: 10px;
+}
+/* ==========================================================================
+   #CASE ACTIONS
+   ========================================================================== */
+.jui-case-actions__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jui-case-actions__item {
+  margin-right: 10px;
+  float: left;
+}
+
+.jui-case-actions__item:last-child {
+  margin-right: 0;
+}
+
+.jui-case-actions__link {
+  background-color: #f8f8f8;
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.jui-case-actions__link:link, .jui-case-actions__link:visited, .jui-case-actions__link:active {
+  color: #0b0c0c;
+}
+
+.jui-case-actions__link:hover {
+  background-color: #dee0e2;
+}
+/* notification */
+.notifications-menu-view{line-height:0}.notifications-menu-view .gn-title.c-notifications-menu{display:inline-block;cursor:pointer;text-align:center}.notifications-menu-view .gn-title.c-notifications-menu:hover{opacity:.7}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-icon{display:inline-block;background:url(/public/images/icon-notification@2x.png) 0px 0px no-repeat;width:22px;height:24px;position:relative}@media only screen and (-o-min-device-pixel-ratio:150/100),only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-resolution:1.5dppx),only screen and (min-resolution:144dpi){.notifications-menu-view .gn-title.c-notifications-menu .c-notification-icon{background-image:url(/public/images/icon-notification@2x.png);background-size:70px 70px; background-size: cover;}}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount{position:absolute;top:-3px;right:-5px;display:block;border-radius:2px;border:1px solid #fff;padding:0 4px;font:normal 11px Arial,sans-serif;line-height:11px;background:#000;color:#fff}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount.hidden{display:none}.styleguide-global-nav .notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount,.styleguide-global-nav .notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount:hover{box-sizing:border-box;height:16px;min-width:16px;text-align:center;line-height:17px;border-radius:8px;font-size:12px;font-family:inherit;border:none;right:-10px;top:-11px;background:#ff0084}
+
+</style>
