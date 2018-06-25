@@ -89,4 +89,82 @@
 /* notification */
 .notifications-menu-view{line-height:0}.notifications-menu-view .gn-title.c-notifications-menu{display:inline-block;cursor:pointer;text-align:center}.notifications-menu-view .gn-title.c-notifications-menu:hover{opacity:.7}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-icon{display:inline-block;background:url(/public/images/icon-notification@2x.png) 0px 0px no-repeat;width:22px;height:24px;position:relative}@media only screen and (-o-min-device-pixel-ratio:150/100),only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-resolution:1.5dppx),only screen and (min-resolution:144dpi){.notifications-menu-view .gn-title.c-notifications-menu .c-notification-icon{background-image:url(/public/images/icon-notification@2x.png);background-size:70px 70px; background-size: cover;}}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount{position:absolute;top:-3px;right:-5px;display:block;border-radius:2px;border:1px solid #fff;padding:0 4px;font:normal 11px Arial,sans-serif;line-height:11px;background:#000;color:#fff}.notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount.hidden{display:none}.styleguide-global-nav .notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount,.styleguide-global-nav .notifications-menu-view .gn-title.c-notifications-menu .c-notification-unseencount:hover{box-sizing:border-box;height:16px;min-width:16px;text-align:center;line-height:17px;border-radius:8px;font-size:12px;font-family:inherit;border:none;right:-10px;top:-11px;background:#ff0084}
 
+/* Accordian */
+	
+	.accordion-controls {
+  text-align: right;
+}
+
+.accordion-expand-all {
+  display: inline;
+  background: transparent;
+  border-width: 0;
+  font-size: 16px;
+  color: #005EA5;
+  cursor: pointer;
+}
+
+.accordion .accordion-section[aria-expanded="false"] .accordion-section-body {
+  display: none;
+}
+
+.accordion.with-js {
+  border-bottom-width: 1px;
+  border-bottom-color: #bfc1c3;
+  border-bottom-style: solid;
+}
+
+.accordion.with-js .accordion-section {
+  border-top-width: 1px;
+  border-top-color: #bfc1c3;
+  border-top-style: solid;
+}
+
+.accordion.with-js h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.accordion.with-js .accordion-section-header {
+  cursor: pointer;
+  position: relative;
+  padding-top: 14px;
+  padding-bottom: 12px;
+}
+
+.accordion.with-js .accordion-section-header h2 {
+  color: #005EA5;
+}
+
+.accordion.with-js .accordion-section-header:hover {
+  background-color: #f8f8f8;
+}
+
+.accordion.with-js .icon {
+
+  position: absolute;
+  top: 50%;
+  right: 15px;
+
+  height: 16px;
+  width: 16px;
+  margin-top: -8px;
+
+  /* Note: you may have to update these URL paths */;
+
+  /* PNG fallback for SVG */
+  background-image: url('/public/images/icon-plus-minus.png');
+
+  /* SVG sprite */
+  background: url("public/images/icon-plus-minus.svg"), linear-gradient(transparent, transparent);
+  background: url("public/images/icon-plus-minus.svg"), linear-gradient(transparent, transparent);
+
+  background-repeat: no-repeat;
+  background-position: 0 -16px;
+}
+
+.accordion.with-js .accordion-section[aria-expanded="true"] .icon {
+  background-position: 0 0;
+}
+	
 </style>
