@@ -333,6 +333,16 @@
                   <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
                   {% endif %}
                 </li>
+			  <li class="task-list-item">
+              <a class="task-name" href="-c110a-allocation?change=false">
+              Pervious proceedings and allocation proposal
+              </a>
+              {% if data['previous-proceedings'] and data['allocation-proposal'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+            </li>
             <li class="task-list-item">
               <a class="task-name" href="-c110a-attending?change=false">
               Attending hearing
