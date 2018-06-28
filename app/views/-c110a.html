@@ -234,7 +234,7 @@
             </li>
             <li class="task-list-item">
               <a class="task-name" href="-c110a-respondent?change=false" aria-describedby="read-declaration-completed">
-                Respondents 
+                Respondents
               </a>
               {% if data['respondent-1-full-name'] and data['respondent-1-gender']  %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
@@ -269,7 +269,7 @@
           <ul class="task-list-items">
             <li class="task-list-item">
               <a class="task-name" href="-c110a-orders?change=false" aria-describedby="company-information-completed">
-               Which orders do you want to apply for?
+               Orders needed
               </a>
               {% if data['order-type']  %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
@@ -280,7 +280,7 @@
             </li>
             <li class="task-list-item">
               <a class="task-name" href="-c110a-urgency?change=false" aria-describedby="contact-details-completed">
-                When do you need a hearing?
+                Hearing needed
               </a>
               {% if data['urgent-type'] and data['without-notice']  %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
@@ -293,7 +293,7 @@
 
 			  <li class="task-list-item">
               <a class="task-name" href="-c110a-grounds?change=false">
-               What are the grounds for application?
+                Grounds for application
               </a>
               {% if data['grounds-for-application'] and data['threshold-evidence']  %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
@@ -335,7 +335,7 @@
                 </li>
 			  <li class="task-list-item">
               <a class="task-name" href="-c110a-allocation?change=false">
-              Pervious proceedings and allocation proposal
+              Allocation proposal and other proceedings
               </a>
               {% if data['previous-proceedings'] and data['allocation-proposal'] %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>

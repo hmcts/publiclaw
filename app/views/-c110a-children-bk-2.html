@@ -113,7 +113,7 @@ C110a form - Children
       <div class="govuk-radios__conditional" id="conditional-child-situation-conditional-1">
         <div class="govuk-form-group">
             <label class="govuk-label" for="more-detail">
-            Address where child is staying
+            Provide current address
             </label>
 
             <textarea class="govuk-textarea" id="child-situation-1-address" name="child-situation-1-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-1-address'] }}</textarea>
@@ -129,14 +129,14 @@ C110a form - Children
       <div class="govuk-radios__conditional" id="conditional-child-situation-conditional-2">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-phone">
-    Address where child is staying
+    Provide current address
   </label>
             <textarea class="govuk-textarea" id="child-situation-2-address" name="child-situation-2-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-2-address'] }}</textarea>
         </div>
 
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="child-situation-3" name="child-situation" type="radio" value="Removed under police powers which are expiring soon" {{ checked('child-situation','Removed under police powers which are expiring soon') }} data-aria-controls="conditional-child-situation-conditional-3">
+        <input class="govuk-radios__input" id="child-situation-3" name="child-situation" type="radio" value="Removed under police powers which are expiring soon" {{ checked('child-situation','Removed under police powers which are expiring soon') }}data-aria-controls="conditional-child-situation-conditional-3">
         <label class="govuk-label govuk-radios__label" for="child-situation-conditional-3">
         Removed under police powers which are expiring soon
       </label>
@@ -150,7 +150,7 @@ C110a form - Children
         </div>
         <div class="govuk-form-group">
             <label class="govuk-label" for="more-detail">
-            Address where child is staying
+            Provide current address
             </label>
 
             <textarea class="govuk-textarea" id="child-situation-3-address" name="child-situation-3-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-3-address'] }}</textarea>
@@ -167,7 +167,7 @@ C110a form - Children
       <div class="govuk-radios__conditional" id="conditional-child-situation-conditional-4">
         <div class="govuk-form-group">
             <label class="govuk-label" for="more-detail">
-          Address where child is staying
+            Provide current address
             </label>
 
             <textarea class="govuk-textarea" id="child-situation-4-address" name="child-situation-4-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-4-address'] }}</textarea>
@@ -189,7 +189,7 @@ C110a form - Children
         </div>
         <div class="govuk-form-group">
             <label class="govuk-label" for="more-detail">
-            Address where child is staying
+            Provide current address
             </label>
 
             <textarea class="govuk-textarea" id="child-situation-5-address" name="child-situation-5-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-5-address'] }}</textarea>
@@ -199,22 +199,22 @@ C110a form - Children
       <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="child-situation-conditional-6" name="child-situation" type="radio" value="Others" {{ checked('child-situation','Others') }} data-aria-controls="conditional-child-situation-conditional-6">
             <label class="govuk-label govuk-radios__label" for="child-situation-1">
-        Other
+        Others
       </label>
       </div>
       <div class="govuk-radios__conditional" id="conditional-child-situation-conditional-6">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-text">
-    Details
+    Specify
   </label>
-            <textarea class="govuk-textarea" id="child-situation-others" name="child-situation-others" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-others'] }}</textarea>
+          <input class="govuk-input govuk-!-width-one-third" id="child-situation-6-others" name="child-situation-5-discharge-date" type="text" value="{{ data['child-situation-5-discharge-date'] }}">
         </div>
         <div class="govuk-form-group">
             <label class="govuk-label" for="more-detail">
-            Address where child is staying
+            Provide current address
             </label>
 
-            <textarea class="govuk-textarea" id="child-situation-6-address" name="child-situation-6-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-6-address'] }}</textarea>
+            <textarea class="govuk-textarea" id="child-situation-6-address" name="child-situation-5-address" rows="3" aria-describedby="more-detail-hint">{{ data['child-situation-6-address'] }}</textarea>
         </div>
 
       </div>
@@ -226,15 +226,130 @@ C110a form - Children
 
 
 
+<!-- toggled content child’s situation  -->
+
+<div class="form-group">
+  <fieldset>
+
+    <legend>
+      <span class="form-label">
+        Describe child’s situation at time of application
+      </span>
+
+    </legend>
+
+
+    <div class="multiple-choice" data-target="situation-a">
+      <input id="child-situation" name="child-situation" type="radio" value="Child removed under police powers which are expiring soon" {{ checked('child-situation','Child removed under police powers which are expiring soon') }}>
+      <label for="child-accommodation-no">Child removed under police powers which are expiring soon</label>
+    </div>
+	  <div class="panel panel-border-narrow js-hidden" id="situation-a">
+      <label class="form-label" for="nationalities-other-country">Expire date</label>
+
+
+      <div class="form-date">
+        <div class="form-group form-group-day">
+          <label class="form-label" for="dob-day">Day</label>
+          <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+        </div>
+        <div class="form-group form-group-month">
+          <label class="form-label" for="dob-month">Month</label>
+          <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+        </div>
+        <div class="form-group form-group-year">
+          <label class="form-label" for="dob-year">Year</label>
+          <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+        </div>
+		   <div class="panel">
+           <!-- details -->
+		   <label class="form-label" for="textarea">Give details</label>
+           <textarea class="form-control form-control-3-4" name="s-b-details" id="textarea" rows="5"></textarea>
+		  </div>
+      </div>
+
+
+</div>
+    <div class="multiple-choice" data-target="situation-b">
+      <input id="child-situation" name="child-situation"  type="radio" value="Children accommodated under Section 20 agreement" {{ checked('child-situation','Children accommodated under Section 20 agreement') }}>
+      <label for="child-accommodation-yes">Children accommodated under Section 20 agreement</label>
+    </div>
+    <div class="panel panel-border-narrow js-hidden" id="situation-b">
+
+
+<label class="form-label" for="textarea">Give details</label>
+           <textarea class="form-control form-control-3-4" name="s-b-details" id="textarea" rows="5"></textarea>
+
+
+
+
+</div>
+	  <div class="multiple-choice" data-target="situation-c">
+      <input id="child-situation" name="child-situation"  type="radio" value="Child in hospital and awaiting discharge" {{ checked('child-situation','Child in hospital and awaiting discharge') }}>
+      <label for="child-accommodation-yes">	Child in hospital and awaiting discharge</label>
+    </div>
+    <div class="panel panel-border-narrow js-hidden" id="situation-c">
+      <label class="form-label" for="nationalities-other-country">Discharge date</label>
+
+
+      <div class="form-date">
+        <div class="form-group form-group-day">
+          <label class="form-label" for="dob-day">Day</label>
+          <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+        </div>
+        <div class="form-group form-group-month">
+          <label class="form-label" for="dob-month">Month</label>
+          <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+        </div>
+        <div class="form-group form-group-year">
+          <label class="form-label" for="dob-year">Year</label>
+          <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+        </div>
+		   <div class="panel">
+           <!-- details -->
+		   <label class="form-label" for="textarea">Give details</label>
+           <textarea class="form-control form-control-3-4" name="s-b-details" id="textarea" rows="5"></textarea>
+		  </div>
+      </div>  </div>
+
+
+   <div class="multiple-choice" data-target="situation-d">
+      <input id="child-situation" name="child-situation"  type="radio"  value="Child is with respondents or alternative carers, not in immediate danger but needs proceedings" {{ checked('child-situation','Child is with respondents or alternative carers, not in immediate danger but needs proceedings') }}>
+      <label for="child-accommodation-yes">Child is with respondents or alternative carers, not in immediate danger but needs proceedings</label>
+    </div>
+
+
+
+
+	  <div class="multiple-choice" data-target="situation-e">
+      <input id="child-situation" name="child-situation"  type="radio" value="Others" {{ checked('child-situation','Others') }}>
+      <label for="child-accommodation-yes">Other</label>
+    </div>
+    <div class="panel panel-border-narrow js-hidden" id="situation-e">
+
+
+
+           <!-- details -->
+		   <label class="form-label" for="textarea">Describe</label>
+           <textarea class="form-control form-control-3-4" name="s-b-details" id="textarea" rows="5"></textarea>
+
+
+
+
+    </div>
+
+
+
+</div>
+
 
 		<!-- Key dates child timeline -->
 		<div class="form-group">
   <label class="form-label" for="textarea">
    Key dates for this child
 	  <span class="form-hint">
-      List any events we'll need to take into account when scheduling hearings.
+      List any significant events
 		  <br>
-      For example, child starting primary school or taking GCSEs
+      For example, ‘starting secondary school’.
     </span>
   </label>
 
@@ -249,7 +364,7 @@ C110a form - Children
 <!-- Mother's Full name -->
 <div class="form-group">
   <label class="form-label" for="child-1-mother-name">
-  Mother's full name
+  Mother's name
 
   </label>
   <input type="text" class="form-control" id="child-1-mother-name" name="child-1-mother-name" value="{{ data['child-1-mother-name'] }}">
@@ -259,7 +374,7 @@ C110a form - Children
 <!-- Father's Full name -->
 <div class="form-group">
   <label class="form-label" for="child-1-father-name">
-  Father's full name
+  Father's name
 
   </label>
 	<input type="text" class="form-control" id="child-1-father-name" name="child-1-father-name" value="{{ data['child-1-father-name'] }}"/>

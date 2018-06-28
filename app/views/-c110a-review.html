@@ -19,7 +19,7 @@ C110a Form
 
 
 <div style="font-size:85%;">
-		 <h1 class="govuk-heading-l">
+		 <h1 class="govuk-heading-xl">
         Check your answers before sending your application
       </h1>
 
@@ -43,7 +43,7 @@ C110a Form
           </dd>
         </div>
 
-          <div>
+          <!--<div>
             <dt class="cya-question">
             Age
             </dt>
@@ -55,7 +55,7 @@ C110a Form
                 Change <span class="visually-hidden"> Date of birth</span>
               </a>
             </dd>
-          </div>
+          </div>-->
         <div>
           <dt class="cya-question">
             Date of birth
@@ -85,11 +85,37 @@ C110a Form
 
         <div>
           <dt class="cya-question">
+            Child's situation
+          </dt>
+          <dd class="cya-answer">
+         {{ data['child-situation'] }}
+
+         {% if data['child-situation-3-expiry-date'] %}
+          <br/> Expiry date: <strong >{{ data['child-situation-3-expiry-date'] }}</strong>
+         {% else %}
+         <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+         {% endif %}
+
+
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-children?change=true">
+              Change <span class="visually-hidden"> child situation</span>
+            </a>
+          </dd>
+        </div>
+
+        <div>
+          <dt class="cya-question">
             Child's current address
           </dt>
           <dd class="cya-answer">
 			   {{ data['child-1-address'] }}
-           
+         {{ data['child-situation-1-address'] }}
+         {{ data['child-situation-2-address'] }}
+         {{ data['child-situation-3-address'] }}
+
+
           </dd>
           <dd class="cya-change">
             <a href="-c110a-children?change=true">
@@ -141,7 +167,7 @@ C110a Form
           </dd>
         </div>
 		  <div>
-          <dt class="cya-question">
+          <dt class="cya-question "style="padding: 0px!important;"><span style="display:block; border-left:1px solid #ccc; border-bottom:1px solid #ccc; width:15px; height:20px; margin-top:-10px; float:left;"> </span>
            Parental responsibility
           </dt>
           <dd class="cya-answer">
@@ -251,7 +277,7 @@ C110a Form
             </dt>
             <dd class="cya-answer">
   			   {{ data['respondent-1-current-address'] }}
-             
+
             </dd>
             <dd class="cya-change">
               <a href="-c110a-respondent?change=true">
@@ -1182,7 +1208,7 @@ Hearings needed
                               Are you aware of previous proceedings?
                             </dt>
                             <dd class="cya-answer">
-                              {{ data['previous-proceedings'] }} 
+                              {{ data['previous-proceedings'] }}
                             </dd>
                             <dd class="cya-change">
                               <a href="-c110a-allocation?change=true">
@@ -1284,7 +1310,7 @@ Hearings needed
                               </dd>
                             </div>
 
-							
+
                         </dl>
 	    <h2 class="heading-medium">
                           Allocation proposal
@@ -1374,8 +1400,8 @@ Hearings needed
 
 
 		<h2 class="heading-medium"> Application fee: £2,058.00/-</h2>
-	
-	
+
+
 	<div class="notice">
   <i class="icon icon-important">
     <span class="visually-hidden">Warning</span>
