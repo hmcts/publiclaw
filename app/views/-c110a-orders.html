@@ -33,11 +33,11 @@ C110a - Orders
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
       <h1 class="govuk-fieldset__heading">
-        Which orders do you want to apply for?
+        Which orders do you want to apply for?<!--What order(s) are you applying for?-->
       </h1>
     </legend>
     <span id="nationality-hint" class="govuk-hint">
-  If you want more than one order, select all options that need
+  If you want more than one order, tick all which apply
 </span>
 
     <div class="govuk-checkboxes" data-module="checkboxes">
@@ -76,9 +76,9 @@ C110a - Orders
       </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="order-type-conditional-others-1" name="order-type-detail" type="checkbox" value="Others" data-aria-controls="conditional-order-type-others-1" {{ checked('order-type-detail','Others') }}>
+        <input class="govuk-checkboxes__input" id="order-type-conditional-others-1" name="order-type-detail" type="checkbox" value="Other" data-aria-controls="conditional-order-type-others-1" {{ checked('order-type-detail','Other') }}>
         <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-2">
-        Others
+        Other
       </label>
       </div>
       <div class="govuk-checkboxes__conditional" id="conditional-order-type-others-1">
@@ -122,9 +122,9 @@ Please specify
               </label>
               </div>
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="order-type-conditional-2" name="order-type-detail" type="checkbox" value="Others" data-aria-controls="conditional-order-type-others-2" {{ checked('order-type-detail','Others') }}>
+                <input class="govuk-checkboxes__input" id="order-type-conditional-2" name="order-type-detail" type="checkbox" value="Other" data-aria-controls="conditional-order-type-others-2" {{ checked('order-type-detail','Other') }}>
                 <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-2">
-                Others
+                Other
               </label>
               </div>
               <div class="govuk-checkboxes__conditional" id="conditional-order-type-others-2">
