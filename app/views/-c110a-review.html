@@ -61,8 +61,8 @@ C110a Form
             Date of birth
           </dt>
           <dd class="cya-answer">
-            {{ data['child-dob-day'] }} {{ data['child-dob-month'] }}
-{{ data['child-dob-year'] }}          </dd>
+            {{ data['child-1-dob-day'] }} {{ data['child-1-dob-month'] }}
+{{ data['child-1-dob-year'] }}          </dd>
           <dd class="cya-change">
             <a href="-c110a-children?change=true">
               Change <span class="visually-hidden"> Date of birth</span>
@@ -133,10 +133,24 @@ C110a Form
           </dd>
           <dd class="cya-change">
             <a href="-c110a-children?change=true">
-              Change<span class="visually-hidden"> Key dates</span>
+              Change<span class="visually-hidden"> key dates</span>
             </a>
           </dd>
         </div>
+        <div>
+           <dt class="cya-question">
+            Care plan
+           </dt>
+           <dd class="cya-answer">
+           {{ data['care-plan'] }}
+
+           </dd>
+           <dd class="cya-change">
+             <a href="-c110a-children?change=true">
+               Change<span class="visually-hidden"> care plan</span>
+             </a>
+           </dd>
+         </div>
 
 		    <div>
           <dt class="cya-question">
@@ -167,11 +181,11 @@ C110a Form
           </dd>
         </div>
 		  <div>
-          <dt class="cya-question "style="padding: 0px!important;"><span style="display:block; border-left:1px solid #ccc; border-bottom:1px solid #ccc; width:15px; height:20px; margin-top:-10px; float:left;"> </span>
+          <dt class="cya-question" style="padding: 0px!important;"><!--<span style="display:block; border-left:1px solid #ccc; border-bottom:1px solid #ccc; width:15px; height:20px; margin-top:-10px; float:left;"> </span> -->
            Parental responsibility
           </dt>
           <dd class="cya-answer">
-			   {{ data['child-1-parental-responsibility'] }}
+			   {{ data['child-1-father-parental-responsibility'] }}
 
           </dd>
           <dd class="cya-change">
@@ -208,6 +222,21 @@ C110a Form
             </a>
           </dd>
         </div>
+        <div>
+            <dt class="cya-question">
+                  Additional needs
+                </dt>
+                <dd class="cya-answer">
+                  {{ data['child-1-addtional-needs'] }}
+                  <br/>
+                    {{ data['child-1-addtional-needs-details'] }}
+                </dd>
+                <dd class="cya-change">
+                  <a href="-c110a-children?change=true">
+                    Change<span class="visually-hidden">addtional needs</span>
+                  </a>
+                </dd>
+              </div>
       </dl>
 
 

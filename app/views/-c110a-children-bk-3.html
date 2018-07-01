@@ -31,52 +31,37 @@ C110a form - Children
 <h2 class="govuk-heading-l">
         Child 1
       </h2>
+<!-- Child Full name -->
+<div class="form-group">
+  <label class="form-label" for="child-1-full-name">
+  Child’s full name
 
-<!-- Child's full name -->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
-    <span class="govuk-label---s">  Child’s full name</span>
   </label>
-  <input class="govuk-input govuk-!-width-one-half" id="full-name" name="child-1-full-name" type="text" value="{{ data['child-1-full-name'] }}">
+  <input type="text" class="form-control" id="child-1-full-name" name="child-1-full-name" value="{{ data['child-1-full-name'] }}">
 </div>
 
-<!-- Date of birth -->
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
-    <legend class="govuk-fieldset__legend-">
-      <span class="govuk-label---s">
+<!-- Date of birth -->
+<div class="form-group">
+  <fieldset>
+    <legend>
+      <span class="form-label">
         Date of birth
       </span>
+      <span class="form-hint">For example, 31 3 1980</span>
     </legend>
-    <span id="dob-hint" class="govuk-hint">
-    For example, 31 3 1980
-  </span>
-    <div class="govuk-date-input" id="dob">
-      <div class="govuk-date-input__item govuk-date-input__item--day">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="dob-day">
-          Day
-        </label>
-          <input class="govuk-input govuk-date-input__input" id="dob-day" name="child-1-dob-day" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
-        </div>
+    <div class="form-date">
+      <div class="form-group form-group-day">
+        <label class="form-label" for="dob-day">Day</label>
+        <input class="form-control" id="dob-day" name="child-dob-day" value="{{ data['child-dob-day'] }}" type="number" pattern="[0-9]*" min="0" max="31">
       </div>
-      <div class="govuk-date-input__item govuk-date-input__item--month">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="dob-month">
-          Month
-        </label>
-          <input class="govuk-input govuk-date-input__input" id="dob-month" name="child-1-dob-month" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
-        </div>
+      <div class="form-group form-group-month">
+        <label class="form-label" for="dob-month">Month</label>
+        <input class="form-control" id="dob-month" name="child-dob-month" value="{{ data['child-dob-month'] }}" type="number" pattern="[0-9]*" min="0" max="12">
       </div>
-      <div class="govuk-date-input__item govuk-date-input__item--year">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="dob-year">
-          Year
-        </label>
-          <input class="govuk-input govuk-date-input__input" id="dob-year" name="child-1-dob-year" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
-        </div>
+      <div class="form-group form-group-year">
+        <label class="form-label" for="dob-year">Year</label>
+        <input class="form-control" id="dob-year" name="child-dob-year" value="{{ data['child-dob-year'] }}" type="number" pattern="[0-9]*" min="0" max="2016">
       </div>
     </div>
   </fieldset>
@@ -88,7 +73,7 @@ C110a form - Children
     <fieldset >
 
       <legend>
-        <span class="govuk-heading--s">
+        <span class="govuk-heading-s">
            Gender
         </span>
       </legend>
@@ -113,8 +98,8 @@ C110a form - Children
 <!-- Child's situation -->
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend---m">
-      <h2 class="govuk-label-s">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-label">
         Describe child’s situation
       </h2>
     </legend>
@@ -239,49 +224,42 @@ C110a form - Children
 </div>
 
 
+
+
+
 		<!-- Key dates child timeline -->
-
-    <div class="govuk-form-group">
-  <label class="govuk-label-s" for="more-detail">
-    Key dates for this child
-  </label>
-  <span id="key-dates-hint" class="govuk-hint">
+		<div class="form-group">
+  <label class="form-label" for="textarea">
+   Key dates for this child
+	  <span class="form-hint">
       List any events we'll need to take into account when scheduling hearings.
-      <br>
+		  <br>
       For example, child starting primary school or taking GCSEs
-  </span>
-  <textarea class="govuk-textarea" id="key-dates" name="key-dates" rows="5" aria-describedby="key-dates-hint">{{ data['key-dates'] }} </textarea>
-</div>
-
-<!-- Care plam for child -->
-
-<div class="govuk-form-group">
-<label class="govuk-label-s" for="more-detail">
-Care plan
-</label>
-<span id="key-dates-hint" class="govuk-hint">
-  For example,
-  <br>
-  Place baby in local authority foster care until further assessments are completed.
-</span>
-<textarea class="govuk-textarea" id="key-dates" name="care-plan" rows="5" aria-describedby="care-plan-hint">{{ data['care-plan'] }} </textarea>
-</div>
-
-
-<!-- Mother's full name -->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="child-1-mother-name">
-    <span class="govuk-label-s"> Mother's full name</span>
+    </span>
   </label>
-  <input class="govuk-input govuk-!-width-one-half" id="child-1-mother-name" name="child-1-mother-name" type="text" value="{{ data['child-1-mother-name'] }}">
+
+<textarea class="form-control form-control-3-4" name="key-dates" id="textarea" rows="5" >{{ data['key-dates'] }}</textarea>
+
 </div>
 
-<!-- Father's full name -->
 
+
+
+
+<!-- Mother's Full name -->
+<div class="form-group">
+  <label class="form-label" for="child-1-mother-name">
+  Mother's full name
+
+  </label>
+  <input type="text" class="form-control" id="child-1-mother-name" name="child-1-mother-name" value="{{ data['child-1-mother-name'] }}">
+</div>
+
+
+<!-- Father's Full name -->
 <div class="govuk-form-group">
   <label class="govuk-label govuk-!-width-one-half" for="child-1-father-name">
-    <span class="govuk-label-s">  Father's full name</span>
+    Father's full name
   </label>
   <input class="govuk-input govuk-!-width-one-half" id="child-1-father-name" name="child-1-father-name" type="text" value="{{ data['child-1-father-name'] }}">
 </div>
@@ -300,19 +278,19 @@ Care plan
   </span>
     <div class="govuk-radios govuk-radios--inline">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name-1" name="child-1-father-parental-responsibility" type="radio" value="Yes" {{ checked('child-1-father-parental-responsibility','Yes') }}>
+        <input class="govuk-radios__input" id="changed-name-1" name="child-1-father-parental-responsibility" type="radio" value="yes" {{ checked('child-1-father-parental-responsibility','yes') }}>
         <label class="govuk-label govuk-radios__label" for="changed-name-1">
         Yes
       </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name-2" name="child-1-father-parental-responsibility" type="radio" value="No" {{ checked('child-1-father-parental-responsibility','No') }}>
+        <input class="govuk-radios__input" id="changed-name-2" name="child-1-father-parental-responsibility" type="radio" value="no" {{ checked('child-1-father-parental-responsibility','no') }}>
         <label class="govuk-label govuk-radios__label" for="changed-name-2">
         No
       </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changed-name-2" name="child-1-father-parental-responsibility" type="radio" value="Do not know" {{ checked('child-1-father-parental-responsibility','Do not know') }}>
+        <input class="govuk-radios__input" id="changed-name-2" name="child-1-father-parental-responsibility" type="radio" value="do not know" {{ checked('child-1-father-parental-responsibility','do not know') }}>
         <label class="govuk-label govuk-radios__label" for="changed-name-2">
         Don't know
       </label>
@@ -323,55 +301,80 @@ Care plan
 </div>
 
 
-<!-- Social worker's full name -->
+<div class="panel-border-narrow panel inline">
 
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="child-1-social-worker-name">
-    <span class="govuk-label-s">   Name of social worker</span>
+
+
+        <legend>
+          <h1 class="heading-small">
+
+          </h1>
+          <span class="body-text">Parental responsibility</span>
+        </legend>
+
+        <div class="multiple-choice" >
+          <input id="radio-parental-res-4" type="radio" name="child-1-parental-responsibility" value="yes" {{ checked('child-1-parental-responsibility','yes') }}>
+          <label for="radio-parental-res-4">Yes</label>
+        </div>
+        <div class="multiple-choice" >
+          <input id="radio-parental-res-4" type="radio" name="child-1-parental-responsibility" value="no" {{ checked('child-1-parental-responsibility','no') }}>
+          <label for="radio-parental-res-4">No</label>
+        </div>
+
+		 <div class="multiple-choice" >
+          <input id="radio-parental-res-4" type="radio" name="child-1-parental-responsibility" value="Do not know" {{ checked('child-1-parental-responsibility','Do not know') }}>
+          <label for="radio-parental-res-4">Don't know</label>
+        </div>
+		</div>
+
+
+		<!-- Social worker detials-->
+
+<!-- Social worker's Full name -->
+<div class="form-group">
+  <label class="form-label" for="child-1-full-name">
+  Name of social worker
+
   </label>
-  <input class="govuk-input govuk-!-width-one-half" id="child-1-social-worker-name" name="child-1-social-worker-name" type="text" value="{{ data['child-1-social-worker-name'] }}">
+  <input type="text" class="form-control" id="child-1-social-name" name="child-1-social-worker-name" value="{{ data['child-1-social-worker-name'] }}" />
 </div>
 
-<!-- Social worker's contact number -->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="child-1-social-worker-phone-number">
-    <span class="govuk-label-s">   Social worker's telephone phone number</span><span class="form-hint">Mobile or landline</span>
-  </label>
-  <input class="govuk-input govuk-!-width-one-half" id="child-1-social-worker-phone-number" name="child-1-social-worker-phone-number" type="text" value="{{ data['child-1-social-worker-phone-number'] }}">
+			<div class="form-group">
+  <div class="">
+    <label class="form-label" for="example-phone-number">Social worker's telephone phone number <span class="form-hint">Mobile or landline</span></label>
+    <input class="form-control" id="phone-number" name="child-1-social-worker-phone-number" value="{{ data['child-1-social-worker-phone-number'] }}"
+     type="text" />
+  </div>
 </div>
-
-
-
 
 
 
 <div class="form-group inline">
 
-			<legend class="govuk-label-s">
+			<legend>
 
-Does the child have any additional needs?
+Do you expect that assessments will be needed in this case?
 
-          <span class="form-hint">For example, child needs a interpreter</span>
+          <span class="form-hint">For example, Medical assessment</span>
         </legend>
 
-        <div class="multiple-choice" data-target="child-1-addtional-needs-yes">
-          <input id="parent-1-assesment" type="radio" name="child-1-addtional-needs" value="Yes" {{ checked('child-1-addtional-needs','Yes') }}>
+        <div class="multiple-choice" data-target="assessment-yes">
+          <input id="parent-1-assesment" type="radio" name="child-1-assesment" value="yes" {{ checked('child-1-assesment','yes') }}>
           <label for="radio-parental-res-4">Yes</label>
         </div>
       <div class="multiple-choice" >
-          <input id="parent-1-assesment" type="radio" name="child-1-addtional-needs" value="No" {{ checked('child-1-addtional-needs','No') }}>
+          <input id="parent-1-assesment" type="radio" name="child-1-assesment" value="no" {{ checked('child-1-assesment','no') }}>
           <label for="radio-parental-res-4">No</label>
         </div>
 
 
-				<div class="panel panel-border-narrow js-hidden" id="child-1-addtional-needs-yes">
+				<div class="panel panel-border-narrow js-hidden" id="assessment-yes">
 
         <legend>
 
           <span class="body-text">Give details</span>
         </legend>
-<textarea class="form-control" type="text" id="urgency-reason" name="child-1-addtional-needs-details" rows="4" cols="80"> {{ data['child-1-addtional-needs-details'] }}</textarea>
+<textarea class="form-control" type="text" id="urgency-reason" name="security-details" rows="4" cols="80"></textarea>
 
 
 

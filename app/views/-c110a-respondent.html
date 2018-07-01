@@ -11,7 +11,7 @@ C110a - Respondent(s)
 
 <main id="content" role="main">
   <div class="grid-row">
-    <div class="column-full column-minimum"><div class="temp-notification"> </div>
+    <div class="column-full column-minimum">
 
 
 
@@ -36,12 +36,11 @@ C110a - Respondent(s)
        Respondent 1
       </h2>
 <!-- Respondent(s) Full name -->
-<div class="form-group">
-  <label class="form-label" for="respondent-1-full-name">
-   Full name
-
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="respondent-1-full-name">
+    <span class="govuk-label-s">   Full name</span>
   </label>
-  <input type="text" class="form-control" id="respondent-1-full-name" name="respondent-1-full-name" value="{{ data['respondent-1-full-name'] }}">
+  <input class="govuk-input govuk-!-width-one-half" id="full-name" name="respondent-1-full-name" type="text" value="{{ data['respondent-1-full-name'] }}">
 </div>
 
 
