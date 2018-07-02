@@ -253,13 +253,26 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+	  
+	  <!-- Direction title  -->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
+    <span class="govuk-label---s">  Direction title</span>
+  </label>
+	<span id="more-detail-hint" class="govuk-hint">
+    For example, File and serve case summary
+  </span>
+  <input class="govuk-input " id="new-direction-1-title" name="new-direction-1-title" type="text" value="{{ data['new-direction-1-title'] }}">
+</div>
+	  
      
 	  <div class="govuk-form-group">
   <label class="govuk-label" for="more-detail">
-    Speicfy direction
+    Direction details
   </label>
   <span id="more-detail-hint" class="govuk-hint">
-    For example, File and serve case summary
+    You can add more details here
   </span>
   <textarea class="govuk-textarea" id="more-detail" name="new-direction-1" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
@@ -272,7 +285,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
     <legend class="govuk-fieldset__legend-">
       <span class="govuk-label---s">
-        Specify due date 
+        Due date 
       </span>
     </legend>
     <span id="dob-hint" class="govuk-hint">
@@ -312,12 +325,12 @@
 
 <div class="govuk-form-group">
   <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
-    <span class="govuk-label---s">  Specify time</span>
+    <span class="govuk-label---s">  Time</span>
   </label>
 	<span id="dob-hint" class="govuk-hint">
     For example, 11:00
   </span>
-  <input class="govuk-input govuk-!-width-one-half" id="full-name" name="new-direction-1-time" type="text" value="{{ data['new-direction-1-time'] }}">
+  <input class="govuk-input govuk-input--width-10" id="time" name="new-direction-1-time" type="text" value="{{ data['new-direction-1-time'] }}">
 </div>
   <!-- part -->
 	  
@@ -354,6 +367,52 @@
   </fieldset>
 </div>
 		
+	  
+<script>
+
+
+var counter = 1;
+
+var limit = 5;
+
+function addInput(divName){
+
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+
+     }
+
+     else {
+
+          var newdiv = document.createElement('div');
+
+          newdiv.innerHTML =  "<h2 class='heading-medium'>New direction </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Direction 2 title </label> <input type='text' class='form-control' id='child-2-full-name'> <br/> <br/> ";
+
+          document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+
+<!--<form method="POST">-->
+     <div id="dynamicInput">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="button" value="Add more" onClick="addInput('dynamicInput');">
+
+
+
+<br/><br/>
+	  
 	  <button type="submit" class="govuk-button">
   Issue new direction
 </button>
