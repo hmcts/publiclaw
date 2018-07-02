@@ -217,102 +217,60 @@
   <div class="grid-row-">
     <div class="column-full column-minimum" style="">
 
-	<!--Breadscrumbs
-
-  {% from "breadcrumbs/macro.njk" import govukBreadcrumbs %}
-
-{{ govukBreadcrumbs({
-  items: [
-    {
-      text: "Dashboard",
-      href: "-la-dashboard"
-    },
-    {
-      text: "Cases",
-      href: "la-cases"
-    },
-    {
-      text: "#0093939983"
-    }
-,		{
-      text: "Case summary"
-    }
-  ]
-}) }}-->
+	<!--<a href="javascript: history.go(-1)" class="link-back">Back</a>-->
 
 	<div class="govuk-grid-row column-minimum govuk-clearfix">
 		<br/>
     <h1 class="govuk-heading-l">
-        <span class="govuk-caption-l"> Case #0093939983</span>
-     Directions
+        <span class="govuk-caption-l"> Directions </span>
+      File and serve case summary 
 
     </h1>
 		
 		
 		
-
+<form action="la-directions" >
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
      
+	  <h2 class="govuk-heading-m"> Directions details </h2>
 	  
-		<table>
-  <thead>
-    <tr>
-      <th scope="col">Direction</th>
-      <th class="numeric" scope="col">Due date and time</th>
-      <th class="numeric" scope="col">Party</th>
-		<th class="numeric" scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"><a href="la-directions-view.html"> File and serve all documents to all parties  </a></th>
-      <td class="numeric">22 Sep 2017 <span class="grey-text"> |</span> 10:00</td>
-      <td class="numeric">Local Authority</td>
-		<td class="numeric"><span class="task-completed">Complete</span></td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="la-directions-view.html"> File and serve case summary   </a></th>
-      <td class="numeric">27 Sep 2017 <span class="grey-text"> |</span> 18:00</td>
-      <td class="numeric">Local Authority</td>
-		<td class="numeric"><span class="">Waiting on</span></td>
-    </tr>
-	   <tr>
-      <th scope="row"><a href="la-directions-view.html"> Draft the case management order  </a></th>
-      <td class="numeric">28 Sep 2017 <span class="grey-text"> |</span> 09:00</td>
-      <td class="numeric">Local Authority</td>
-		<td class="numeric"><span class="">Waiting on</span></td>
-    </tr>
-	
-    <tr>
-      <th scope="row"><a href="la-directions-view.html"> Arrange advocate's meeting </a></th>
-      <td class="numeric">26 Sep 2017 <span class="grey-text"> |</span> 10:00</td>
-      <td class="numeric">CAFCASS</td>
-		<td class="numeric"><span class="task-completed">Complete</span></td>
-    </tr>
-	  <tr>
-      <th scope="row"><a href="la-directions-view.html"> File and serve a case analysis document </a></th>
-      <td class="numeric">27 Sep 2017 <span class="grey-text"> |</span> 18:00</td>
-      <td class="numeric">CAFCASS</td>
-		<td class="numeric"><span class="task-completed">Complete</span></td>
-    </tr>
-    <!--<tr>
-      <th scope="row"><a href="la-directions-view.html">Directions form Judge to get evidence</a></th>
-      <td class="numeric">15/02/2018</td>
-      <td class="numeric">Local Authority</td>
-		<td class="numeric"><span class="task-incomplete">Incomplete</span></td>
-    </tr>-->
-	   <tr>
-      <th scope="row"><a href="la-directions-view.html"> File parent's position statement</a></th>
-      <td class="numeric">27 Sep 2017 <span class="grey-text"> |</span> 18:00</td>
-      <td class="numeric">Parent's solicitor</td>
-		<td class="numeric"><span class="task-completed">Complete</span></td>
-    </tr>
-	 
+	  <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut augue mi. Aenean ullamcorper diam sodales, tristique magna eget, ultrices lorem. Mauris quis ullamcorper mauris. Duis id ultrices est. Vestibulum fermentum malesuada justo in pulvinar. Sed sodales dui libero, eu luctus justo eleifend vitae. Donec eget malesuada tortor. </p>
+	  	 
+	  <p class="govuk-body"><span class="govuk-heading-m">Due date and time</span> 22 Sep 2017 | 10:00 </p>
+	  
+	  
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Have you completed the direction?
+      </h1>
+    </legend>
+    <span id="changed-name-hint" class="govuk-hint">
     
-  </tbody>
-</table>
-	  
+  </span>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-1" name="directions-status" type="radio" value="Completed" {{ checked('directions-status','Completed') }}>
+        <label class="govuk-label govuk-radios__label" for="changed-name-1">
+        Completed 
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="directions-status" type="radio" value="In progress" {{ checked('directions-status','In progress') }}>
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+        In progress
+      </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+		
+	  <button type="submit" class="govuk-button">
+  Update direction status
+</button>
+	  </form>
   </div>
   
 </div>
