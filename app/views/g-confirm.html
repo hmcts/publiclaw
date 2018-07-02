@@ -65,7 +65,7 @@
     <li>
       <a class="govuk-link" href="g-case-file" data-topnav="Case file">Case file</a>
     </li>
-    <li class="app-navigation--current-page">
+    <li >
       <a class="govuk-link" href="g-directions" data-topnav="directions">Directions</a>
     </li>
 	  <li >
@@ -239,184 +239,38 @@
     }
   ]
 }) }}-->
-<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
 	<div class="govuk-grid-row column-minimum govuk-clearfix">
 		<br/>
-    <h1 class="govuk-heading-l">
-        <!--<span class="govuk-caption-l"> Case #0093939983</span>-->
-     Issue new directions
-
-    </h1>
-		
-		
-		<form action="g-directions">
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-	  
-	  <!-- Direction title  -->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
-    <span class="govuk-label---s">  Direction title</span>
-  </label>
-	<span id="more-detail-hint" class="govuk-hint">
-    For example, File and serve case summary
-  </span>
-  <input class="govuk-input " id="new-direction-1-title" name="new-direction-1-title" type="text" value="{{ data['new-direction-1-title'] }}">
-</div>
-	  
-     
-	  <div class="govuk-form-group">
-  <label class="govuk-label" for="more-detail">
-    Direction details
-  </label>
-  <span id="more-detail-hint" class="govuk-hint">
-    You can add more details here
-  </span>
-  <textarea class="govuk-textarea" id="more-detail" name="new-direction-1" rows="5" aria-describedby="more-detail-hint"></textarea>
-</div>
-	  
-	  
-	
-<!-- Date  -->
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
-    <legend class="govuk-fieldset__legend-">
-      <span class="govuk-label---s">
-        Due date 
-      </span>
-    </legend>
-    <span id="dob-hint" class="govuk-hint">
-    For example, 31 8 2018
-  </span>
-    <div class="govuk-date-input" id="dob">
-      <div class="govuk-date-input__item govuk-date-input__item--day">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="dob-day">
-          Day
-        </label>
-          <input class="govuk-input govuk-date-input__input" id="dob-day" name="child-1-dob-day" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
-        </div>
-      </div>
-      <div class="govuk-date-input__item govuk-date-input__item--month">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="dob-month">
-          Month
-        </label>
-          <input class="govuk-input govuk-date-input__input" id="dob-month" name="child-1-dob-month" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
-        </div>
-      </div>
-      <div class="govuk-date-input__item govuk-date-input__item--year">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="dob-year">
-          Year
-        </label>
-          <input class="govuk-input govuk-date-input__input" id="dob-year" name="child-1-dob-year" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
-        </div>
-      </div>
-    </div>
-  </fieldset>
-</div>
-
-	  
-	    <!-- Time -->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
-    <span class="govuk-label---s">  Time</span>
-  </label>
-	<span id="dob-hint" class="govuk-hint">
-    For example, 11:00
-  </span>
-  <input class="govuk-input govuk-input--width-10" id="time" name="new-direction-1-time" type="text" value="{{ data['new-direction-1-time'] }}">
-</div>
-  <!-- part -->
-	  
-	  <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
-    <legend class="govuk-fieldset__legend ">
-  
-        Which parties do you want to send the direction to?
     
-    </legend>
-    <span id="nationality-hint" class="govuk-hint">
+		<div class="govuk-width-container">
 
-  </span>
-    <div class="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="nationality-1" name="new-direction-1-party" type="checkbox" value="Local authority">
-        <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
-        Local authority 
-      </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="nationality-2" name="new-direction-1-party" type="checkbox" value="CAFCASS">
-        <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
-        CAFCASS
-      </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="nationality-3" name="new-direction-1-party" type="checkbox" value="Parent solicitor">
-        <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
-        Parent's solicitor
-      </label>
+  <div class="govuk-main-wrapper" style=" padding: 5px 0 0 20px;">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h2 class="govuk-panel__title">
+            Standard directions sent to judge for approval
+          </h2>
+          <div class="govuk-panel__body">
+           Application number<br><strong>#0093939983 </strong>
+          </div>
+        </div>
+
+        <p class="govuk-body">Judge has be sent an email with link to standard directions for approval. We'll send you another confirmation email once the judge's approved the standard directions.</p>
+
+        <h3 class="govuk-heading-m">What happens next</h3>
+
+        <p class="govuk-body">We’ve sent your application to Judge Jeremy Bennett.</p>
+
+        <p class="govuk-body">They may contact you either to confirm your decision, or to ask for more information.</p>
+
+        <p class="govuk-body"><a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)</p>
       </div>
     </div>
-  </fieldset>
+  </div>
+
 </div>
-		
-	  
-<script>
-
-
-var counter = 1;
-
-var limit = 5;
-
-function addInput(divName){
-
-     if (counter == limit)  {
-          alert("You have reached the limit of adding " + counter + " inputs");
-
-     }
-
-     else {
-
-          var newdiv = document.createElement('div');
-
-          newdiv.innerHTML =  "<h2 class='heading-medium'>New direction </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Direction 2 title </label> <input type='text' class='form-control' id='child-2-full-name'> <br/> <br/> ";
-
-          document.getElementById(divName).appendChild(newdiv);
-
-
-
-
-          counter++;
-
-     }
-
-}
-
-
-</script>
-
-<!--<form method="POST">-->
-     <div id="dynamicInput">
-         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
-
-     </div>
-     <input type="button" class="button" value="Add more" onClick="addInput('dynamicInput');">
-
-
-
-<br/><br/>
-	  
-	  <button type="submit" class="govuk-button">
-  Issue new direction
-</button>
-	  </form>
   </div>
   
 </div>

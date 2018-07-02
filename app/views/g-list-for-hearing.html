@@ -65,7 +65,7 @@
     <li>
       <a class="govuk-link" href="g-case-file" data-topnav="Case file">Case file</a>
     </li>
-    <li class="app-navigation--current-page">
+    <li >
       <a class="govuk-link" href="g-directions" data-topnav="directions">Directions</a>
     </li>
 	  <li >
@@ -239,41 +239,89 @@
     }
   ]
 }) }}-->
-<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
 	<div class="govuk-grid-row column-minimum govuk-clearfix">
 		<br/>
     <h1 class="govuk-heading-l">
         <!--<span class="govuk-caption-l"> Case #0093939983</span>-->
-     Issue new directions
+     List for hearing
 
     </h1>
 		
 		
-		<form action="g-directions">
+		<form action="g-standard-directions">
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 	  
-	  <!-- Direction title  -->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
-    <span class="govuk-label---s">  Direction title</span>
-  </label>
-	<span id="more-detail-hint" class="govuk-hint">
-    For example, File and serve case summary
-  </span>
-  <input class="govuk-input " id="new-direction-1-title" name="new-direction-1-title" type="text" value="{{ data['new-direction-1-title'] }}">
+	   <!-- Judge level -->
+	  
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
+     
+         Allocate Judge level
+      
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+        Lay juitices 
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        District Judge level 
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+      Circuit  Judge level 
+      </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+        DFJ/Section 9 sitting as a Judge of the High Court 
+      </label>
+      </div>
+		<div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+       High Court 
+      </label>
+      </div>
+    </div>
+  </fieldset>
 </div>
+	  
+	  
+	  <!-- Judge name  -->
+
+
+	  
+	  <div class="form-group">
+  <label class="form-label" for="select-box">Select Judge </label>
+  <select class="form-control" id="select-box" name="judge"  value="{{ data['judge'] }}">
+    <option>Judge Jeremy Bennett</option>
+    <option>Judge Arpitha Gowda </option>
+    <option>Judge Olivia Green</option>
+	  <option>Judge Sophia Blue</option>
+  </select>
+</div>
+		<a href=""><h3 class="heading-small" style="text-decoration: underline"> View Judge's calendar</h3></a>
+		<span class="grey-text"> (Calendar opens in a new window)</span><br><br>
 	  
      
 	  <div class="govuk-form-group">
   <label class="govuk-label" for="more-detail">
-    Direction details
+    Reason for allocation
   </label>
   <span id="more-detail-hint" class="govuk-hint">
-    You can add more details here
-  </span>
+    Explain the rationale for allocation decision   </span>
   <textarea class="govuk-textarea" id="more-detail" name="new-direction-1" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
 	  
@@ -285,7 +333,7 @@
   <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
     <legend class="govuk-fieldset__legend-">
       <span class="govuk-label---s">
-        Due date 
+        Hearing date 
       </span>
     </legend>
     <span id="dob-hint" class="govuk-hint">
@@ -297,7 +345,7 @@
           <label class="govuk-label govuk-date-input__label" for="dob-day">
           Day
         </label>
-          <input class="govuk-input govuk-date-input__input" id="dob-day" name="child-1-dob-day" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
+          <input class="govuk-input govuk-date-input__input" id="dob-day" name="hearing-day" value="{{ data['hearing-day'] }}" type="number" pattern="[0-9]*">
         </div>
       </div>
       <div class="govuk-date-input__item govuk-date-input__item--month">
@@ -305,7 +353,7 @@
           <label class="govuk-label govuk-date-input__label" for="dob-month">
           Month
         </label>
-          <input class="govuk-input govuk-date-input__input" id="dob-month" name="child-1-dob-month" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
+          <input class="govuk-input govuk-date-input__input" id="dob-month" name="hearing-month" value="{{ data['hearing-month'] }}" type="number" pattern="[0-9]*">
         </div>
       </div>
       <div class="govuk-date-input__item govuk-date-input__item--year">
@@ -313,7 +361,7 @@
           <label class="govuk-label govuk-date-input__label" for="dob-year">
           Year
         </label>
-          <input class="govuk-input govuk-date-input__input" id="dob-year" name="child-1-dob-year" value="{{ data['child-1-dob-day'] }}" type="number" pattern="[0-9]*">
+          <input class="govuk-input govuk-date-input__input" id="dob-year" name="hearing-year" value="{{ data['hearing-year'] }}" type="number" pattern="[0-9]*">
         </div>
       </div>
     </div>
@@ -325,47 +373,38 @@
 
 <div class="govuk-form-group">
   <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
-    <span class="govuk-label---s">  Time</span>
+    <span class="govuk-label---s">  Hearing time</span>
   </label>
 	<span id="dob-hint" class="govuk-hint">
     For example, 11:00
   </span>
-  <input class="govuk-input govuk-input--width-10" id="time" name="new-direction-1-time" type="text" value="{{ data['new-direction-1-time'] }}">
+  <input class="govuk-input govuk-input--width-10" id="time" name="hearing-time" type="text" value="{{ data['hearing-time'] }}">
 </div>
-  <!-- part -->
 	  
-	  <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
-    <legend class="govuk-fieldset__legend ">
-  
-        Which parties do you want to send the direction to?
-    
-    </legend>
-    <span id="nationality-hint" class="govuk-hint">
+	    <!-- Location -->
 
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
+    <span class="govuk-label---s"> Hearing location </span>
+  </label>
+	<span id="more-detail-hint" class="govuk-hint">
+    For example, Fox courts
   </span>
-    <div class="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="nationality-1" name="new-direction-1-party" type="checkbox" value="Local authority">
-        <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
-        Local authority 
-      </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="nationality-2" name="new-direction-1-party" type="checkbox" value="CAFCASS">
-        <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
-        CAFCASS
-      </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="nationality-3" name="new-direction-1-party" type="checkbox" value="Parent solicitor">
-        <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
-        Parent's solicitor
-      </label>
-      </div>
-    </div>
-  </fieldset>
+  <input class="govuk-input " id="new-direction-1-title" name="hearing-location" type="text" value="{{ data['hearing-location'] }}">
 </div>
+	     <!-- Location -->
+
+<div class="govuk-form-group">
+  <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
+    <span class="govuk-label---s"> Children's guardian appointed by CAFCASS </span>
+  </label>
+	<span id="more-detail-hint" class="govuk-hint">
+    For example, Fox courts
+  </span>
+  <input class="govuk-input " id="new-direction-1-title" name="new-direction-1-title" type="text" value="{{ data['new-direction-1-title'] }}">
+</div>
+	  
+ 
 		
 	  
 <script>
@@ -386,7 +425,7 @@ function addInput(divName){
 
           var newdiv = document.createElement('div');
 
-          newdiv.innerHTML =  "<h2 class='heading-medium'>New direction </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Direction 2 title </label> <input type='text' class='form-control' id='child-2-full-name'> <br/> <br/> ";
+          newdiv.innerHTML =  "<h2 class='heading-medium'>More details </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Addtional info  </label>  <textarea type='textarea' class='form-control' id='child-2-full-name'> </textarea><br/> <br/> ";
 
           document.getElementById(divName).appendChild(newdiv);
 
@@ -407,14 +446,14 @@ function addInput(divName){
          <!-- Entry 1<br><input type="text" name="myInputs[]">-->
 
      </div>
-     <input type="button" class="button" value="Add more" onClick="addInput('dynamicInput');">
+     <input type="button" class="button" value="Add more details" onClick="addInput('dynamicInput');">
 
 
 
 <br/><br/>
 	  
 	  <button type="submit" class="govuk-button">
-  Issue new direction
+  List hearing and issue standard directions
 </button>
 	  </form>
   </div>
