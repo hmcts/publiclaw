@@ -1,7 +1,7 @@
 {% extends "layout-jui.html" %}
 
 {% block page_title %}
- Parties - Case #0093939983
+ C110A
 {% endblock %}
 
 {% block content %}
@@ -21,13 +21,13 @@
   <div class="jui-width-container">
 
     <div class="jui-casebar__details">
-      #0093939983<span class="jui-casebar__title"> London Borough of Southwark versus Samantha Smith & Paul Smith </span>
+      #0093939983<span class="jui-casebar__title"> London Borough of Southwark versus	Samantha Smith & Paul Smith </span>
     </div>
 
 
     <div class="jui-casebar__options">
 
-   <nav class="jui-case-actions" >
+    <nav class="jui-case-actions" >
   <ul class="jui-case-actions__list" >
 
       <li class="jui-case-actions__item" >
@@ -43,7 +43,7 @@
       </li>
 
   </ul>
-</nav>
+</nav><!--  -->
 
     </div>
 
@@ -59,10 +59,10 @@
     <li >
       <a class="govuk-link" href="g-case-summary" data-topnav="Case summary"> Case summary</a>
     </li>
-    <li class="app-navigation--current-page">
+    <li>
       <a class="govuk-link" href="g-parties" data-topnav="Parties">Parties</a>
     </li>
-    <li >
+    <li class="app-navigation--current-page">
       <a class="govuk-link" href="g-case-file" data-topnav="Case file">Case file</a>
     </li>
     <li >
@@ -132,11 +132,9 @@
           <a class="govuk-link" href="g-case-file">C110a Application </a>
         </li>
             <li>
-              <a class="govuk-link" href="g-case-file-swet">SWET</a>
+              <a class="govuk-link" href="/public/images/SWET.pdf" target="_blank">SWET</a>
             </li>
-            <li>
-              <a class="govuk-link" href="g-case-file-e-bundle">E-bundle</a>
-            </li>
+
 			  <li>
               <a class="govuk-link" href="g-case-file-documents">Documents</a>
             </li>
@@ -213,6 +211,110 @@
 </nav>
   </div>
 
+<div class="app-pane__body">
+  <div class="app-pane__subnav app-hide-mobile">
+<nav class="app-subnav">
+	<h4 class="app-subnav__theme">Case file  </h4>
+          <ul class="app-subnav__section">
+            <li class="app-subnav__section-item ">
+              <a class="govuk-link" href="g-case-file">C110a application</a>
+            </li>
+            <li class="app-subnav__section-item">
+              <a class="govuk-link" href="/public/images/SWET.PDF" target="_blank">SWET</a>
+            </li>
+
+			   <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a class="govuk-link" href="g-case-file-documents">Other documents</a>
+            </li>
+			   <li class="app-subnav__section-item">
+              <a class="govuk-link" href="g-case-file-upload">Upload new document</a>
+            </li>
+          </ul>
+</nav>
+  </div>
+ <div class="app-pane__content">
+    <main id="main-content" class="app-content" role="main">
+      <div class="app-content__header">
+
+        <h1 class="govuk-heading-l">
+            <span class="govuk-caption-xl">  </span>
+      Documents
+
+
+        </h1>
+
+
+      </div>
+
+
+
+      <table>
+      <thead>
+      <tr>
+        <th scope="col">Document title </th>
+        <th class="numeric" scope="col">Date</th>
+        <th class="numeric" scope="col">Added by</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr>
+        <th scope="row"><a href="03-case-view-documents-edit" title="Social Work Chronology"> Social Work Chronology</a></th>
+        <td class="numeric">22 June 2018</td>
+        <td class="numeric"> Local Authority</td>
+      </tr>
+       <tr>
+        <th scope="row"><a href="03-case-view-documents-edit" title="Social Work Chronology"> Social Work Statement and genogram</a></th>
+        <td class="numeric">22 June 2018</td>
+        <td class="numeric">Local Authority</td>
+      </tr>
+       <tr>
+        <th scope="row"><a href="03-case-view-documents-edit" title="Social Work Chronology"> Parent Statement </a></th>
+        <td class="numeric">23 June 2018</td>
+        <td class="numeric">Parent Solicitor</td>
+      </tr>
+       <tr>
+        <th scope="row"><a href="03-case-view-documents-edit" title="Social Work Chronology">Social Work Chronology Care Plan</a></th>
+        <td class="numeric">22 June 2018</td>
+        <td class="numeric">Local Authority</td>
+      </tr>
+       <tr>
+        <th scope="row"><a href="03-case-view-documents-edit" title="Social Work Chronology"> Index of Checklist Documents</a></th>
+        <td class="numeric">22 June 2018</td>
+        <td class="numeric">Local Authority</td>
+      </tr>
+
+
+      </tbody>
+      </table>
+
+
+
+
+<!--application end-->
+      </div>
+    </main>
+
+    <div class="app-pane__subnav-mobile-overview app-hide-desktop">
+<nav class="app-subnav">
+          <ul class="app-subnav__section">
+            <li class="app-subnav__section-item">
+              <a class="govuk-link" href="g-case-file"> C110a Application</a>
+            </li>
+            <li class="app-subnav__section-item app-subnav__section-item--current">
+              <a class="govuk-link" href="public/images/SWET.pdf" target="_blank">SWET</a>
+            </li>
+
+			  <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file-documents">Documents/a>
+            </li>
+				  <li class="app-subnav__section-item">
+              <a class="govuk-link" href="la-case-file-upload">Upload new document/a>
+            </li>
+          </ul>
+</nav>
+    </div>
+
 <main id="content" role="main"  class="govuk-clearfix" >
   <div class="grid-row-">
     <div class="column-full column-minimum" style="">
@@ -240,179 +342,20 @@
   ]
 }) }}-->
 
-	<div class="govuk-grid-row column-minimum govuk-clearfix">
-		<br/>
-    <h1 class="govuk-heading-l">
-  <!--      <span class="govuk-caption-l">  Case #0093939983</span>-->
-    Parties
-
-    </h1>
 
 
-		<div class="govuk-grid-row">
+
+
+
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
 
 
-	  <div class="govuk-tabs govuk-!-margin-bottom-6" data-module="tabs">
-  <h2 class="govuk-tabs__title">
-    Contents
-  </h2>
-
-  <ul class="govuk-tabs__list">
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#children">
-          Children
-        </a>
-    </li>
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#respondents">
-           Respondents
-        </a>
-    </li>
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#applicant">
-         Applicant
-        </a>
-    </li>
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#cafcass">
-          CAFCASS
-        </a>
-    </li>
-  </ul>
-
-  <section class="govuk-tabs__panel" id="children">
-    <h2 class="govuk-heading-l">Children</h2>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th class="govuk-table__header" scope="col">Full name</th>
-          <th class="govuk-table__header" scope="col">Gender</th>
-          <th class="govuk-table__header" scope="col">Age</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Adam Smith</td>
-          <td class="govuk-table__cell ">Male </td>
-          <td class="govuk-table__cell ">6</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Emily Reeves</td>
-          <td class="govuk-table__cell ">Female</td>
-          <td class="govuk-table__cell ">8</td>
-        </tr>
-        <!--<tr class="govuk-table__row">
-          <td class="govuk-table__cell">Rita Patel</td>
-          <td class="govuk-table__cell ">Female</td>
-          <td class="govuk-table__cell ">12</td>
-        </tr>-->
-      </tbody>
-    </table>
-
-  </section>
-  <section class="govuk-tabs__panel" id="respondents">
-    <h2 class="govuk-heading-l">Respondents</h2>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th class="govuk-table__header" scope="col">Full name</th>
-          <th class="govuk-table__header" scope="col">Relationship</th>
-          <th class="govuk-table__header" scope="col">Age</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Samantha Smith </td>
-          <td class="govuk-table__cell ">Mother</td>
-          <td class="govuk-table__cell ">	25</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Paul Smith</td>
-          <td class="govuk-table__cell ">Father</td>
-          <td class="govuk-table__cell ">25</td>
-        </tr>
-
-      </tbody>
-    </table>
-
-  </section>
-  <section class="govuk-tabs__panel" id="applicant">
-    <h2 class="govuk-heading-l">Applicant</h2>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th class="govuk-table__header" scope="col">Name</th>
-          <th class="govuk-table__header" scope="col">Job title</th>
-          <th class="govuk-table__header" scope="col">Contact number</th>
-			 <th class="govuk-table__header" scope="col">Email</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">David Francis</td>
-          <td class="govuk-table__cell ">Social worker</td>
-          <td class="govuk-table__cell ">07388393020</td>
-			<td class="govuk-table__cell ">david.francis@la.com</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Paul Farmer</td>
-          <td class="govuk-table__cell ">Legal Advisor</td>
-          <td class="govuk-table__cell ">07388393020</td>
-			<td class="govuk-table__cell ">david.francis@la.com</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Ben Brown</td>
-          <td class="govuk-table__cell ">Solicitor</td>
-          <td class="govuk-table__cell ">07388393020</td>
-	    	<td class="govuk-table__cell ">david.francis@la.com</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </section>
-  <section class="govuk-tabs__panel" id="cafcass">
-    <h2 class="govuk-heading-l">CAFCASS</h2>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th class="govuk-table__header" scope="col">Name</th>
-          <th class="govuk-table__header" scope="col">Job title</th>
-          <th class="govuk-table__header" scope="col">Contact number</th>
-			 <th class="govuk-table__header" scope="col">Email</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Rita Patel</td>
-          <td class="govuk-table__cell ">Guadian</td>
-          <td class="govuk-table__cell ">07388393020</td>
-			<td class="govuk-table__cell ">david.francis@cafcass.gov.uk</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Helen Ryan</td>
-          <td class="govuk-table__cell ">Guadian Solicitor</td>
-          <td class="govuk-table__cell ">07388393020</td>
-	    	<td class="govuk-table__cell ">david.francis@cafcass.gov.uk</td>
-        </tr>
-		  <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Jane kelly</td>
-          <td class="govuk-table__cell ">Guadian Barrister</td>
-          <td class="govuk-table__cell ">07388393020</td>
-	    	<td class="govuk-table__cell ">jane.kelly@cafcass.gov.uk</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </section>
-</div>
 
   </div>
+
 </div>
-
-
 
 
 

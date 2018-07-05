@@ -74,10 +74,10 @@ C110a Form
             Gender
           </dt>
           <dd class="cya-answer">
-            {{ data['child-1-gender'] }}
+            {{ data['child-1-gender'] }} <br/>{{ data['child-1-gender-other'] }}
         </dd>
           <dd class="cya-change">
-            <a href="-c110a-children.html">
+            <a href="-c110a-children?change=true">
               Change <span class="visually-hidden"> Date of birth</span>
             </a>
           </dd>
@@ -716,7 +716,7 @@ C110a Form
 
       </dl>
 
-      <h2 class="heading-medium">
+      <h2 class="heading-medium" id="orders">
       Orders
       </h2>
 
@@ -761,7 +761,7 @@ C110a Form
 
       </dl>
 
-      <h2 class="heading-medium">
+      <h2 class="heading-medium" id="hearings">
 
 Hearings needed
 
@@ -903,7 +903,7 @@ Hearings needed
 
             </dl>
 
-            <h2 class="heading-medium">
+            <h2 class="heading-medium" id="risk-harm">
             Risks and harm to children
 
 
@@ -936,7 +936,7 @@ Hearings needed
                 </dd>
                 <dd class="cya-change">
                   <a href="-c110a-risk-harm?change=true">
-                    Change<span class="visually-hidden">   Non-accidental injury</span>
+                    Change<span class="visually-hidden">Non-accidental injury</span>
                   </a>
                 </dd>
               </div>
@@ -986,7 +986,7 @@ Hearings needed
 
 
             </dl>
-                        <h2 class="heading-medium">
+                        <h2 class="heading-medium" id="parenting">
 
   Factors affecting parenting
 
@@ -1075,7 +1075,7 @@ Hearings needed
 
 
                         </dl>
-                        <h2 class="heading-medium">
+                        <h2 class="heading-medium" id="international">
 
   International element
 
