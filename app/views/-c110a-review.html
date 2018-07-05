@@ -775,14 +775,40 @@ Hearings needed
       <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
-            Do you need an urgent hearing?
+            Hearing in the next 24 hours ?
           </dt>
           <dd class="cya-answer">
-              {{ data['urgent-type'] }} <br/> {{ data['urgency-date'] }}  {{ data['urgency-reason'] }}
+              {{ data['hearing-24-hours'] }} <br/> {{ data['hearing-24-hours-reason'] }}
           </dd>
           <dd class="cya-change">
             <a href="-c110a-urgency?change=true">
-              Change<span class="visually-hidden"> hearing urgency</span>
+              Change<span class="visually-hidden"> hearing </span>
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Hearing in the next 12 days?
+          </dt>
+          <dd class="cya-answer">
+              {{ data['hearing-12-days'] }} <br/> {{ data['hearing-12-days-reason'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-urgency?change=true">
+              Change<span class="visually-hidden"> hearing </span>
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Hearing type?
+          </dt>
+          <dd class="cya-answer">
+              {{ data['hearing-type'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="-c110a-urgency?change=true">
+              Change<span class="visually-hidden"> hearing type</span>
             </a>
           </dd>
         </div>
