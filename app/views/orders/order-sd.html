@@ -201,17 +201,7 @@ function inlineDefaultFinishCell(cell, i, rowName) {
 			var sampleOptions = {"finishCallback": selectCallback};
 		</script>
 <style>
-	body{ width: 750px:
-		margin: 0 auto;
-	}
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-:root {
-	font-size: 16px;
-}
+	
 input, textarea, select {
 	border: none;
 	background-color: transparent;
@@ -224,6 +214,7 @@ input, textarea {
 }
 textarea {
 	width: 90%;
+	height: 160px;
 }
 select {
 	border: 1px solid #f9f9f9;
@@ -235,9 +226,14 @@ select {
 }
 
 
-	input[type="text"], textarea, select {
+	input[type="text"], select {
+	padding: 5px;
+	border: 1px solid #006435;
+		margin: 0px;}
+	
+	 textarea, select {
 	padding: 10px;
-	border: 1px solid #ffa726;
+	border: 1px solid #006435;
 	margin: 5px;
 }
 input[type="button"], input[type="submit"] {
