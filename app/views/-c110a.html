@@ -282,7 +282,7 @@
               <a class="task-name" href="-c110a-urgency?change=false" aria-describedby="contact-details-completed">
                 Hearings needed
               </a>
-              {% if data['urgent-type'] and data['without-notice']  %}
+              {% if data['hearing-24-hours'] and data['hearing-12-days'] and data['without-notice'] and data['reduced-notice'] and data['respondents-notified']%}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
               {% else %}
               <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
