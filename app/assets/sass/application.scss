@@ -54,6 +54,110 @@ $govuk-global-styles: true;
 }
 
 .floating-button{ float: right; font-size: 70%;}
+
+/* Bold text */
+.bold-text{font-weight: bold !important;}
+/* New responsive table */
+
+// Recommended - Use these styles for the check your answers pattern
+.govuk-four-col-table {
+
+  @include media(desktop) {
+    display: table;
+  }
+
+  > * {
+    position: relative;
+    border-bottom: 1px solid $border-colour;
+
+    @include media(desktop) {
+      display: table-row;
+      border-bottom-width: 0;
+    }
+
+    > * {
+      display: block;
+
+      @include media(desktop) {
+        display: table-cell;
+        border-bottom: 1px solid $border-colour;
+        padding: em(12, 19) em(20, 19) em(9, 19) 0; // copied from Elements' td padding
+        margin: 0;
+      }
+    }
+
+    @include media(desktop) {
+      &:first-child > * {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .four-col-one {
+    font-weight: bold;
+    margin: em(12, 19) 4em em(4,19) 0;
+    // top: from Elements' td
+    // right: due to length of "change" link (adjust if you change the link to be much longer)
+    // bottom: by eye
+    // using margin instead of padding because of easier absolutely positioning of .change
+  }
+
+  > *:first-child .four-col-one {
+    margin-top: 0;
+  }
+
+  @include media(desktop) {
+    // to make group of q&a line up horizontally (unless there is just one group)
+    &.four-col-short,
+    &.four-col-long {
+      width: 100%;
+    }
+
+    // recommended for mostly short questions
+    &.four-col-short .cya-one {
+      width: 30%;
+    }
+
+    // recommended for mostly long questions
+    &.four-col-long .cya-one {
+      width: 50%;
+    }
+  }
+
+  .four-col-date {
+    padding-bottom: em(9, 19); // from Elements' td
+  }
+
+  .four-col-action {
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include media(desktop) {
+      position: static;
+      padding-right: 0;
+    }
+  }
+
+}
+
+// Deprecated - these styles will be removed in a later release
+.check-your-answers {
+  td {
+    @include core-19;
+    vertical-align: top;
+  }
+  .change-answer {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 0;
+  }
+}
+
+
+
+
 // Take a look at in app/assets/sass/patterns/ to see which files are imported.
 // @import 'patterns/check-your-answers';
 // @import 'patterns/task-list';
