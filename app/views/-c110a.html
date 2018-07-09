@@ -226,7 +226,7 @@
               <a class="task-name" href="-c110a-children?change=false" aria-describedby="eligibility-completed">
                 Children
               </a>
-              {% if data['key-dates'] and data['child-1-full-name']  %}
+              {% if data['key-dates'] and data['child-1-full-name'] and data['child-1-dob-year'] and data['child-1-gender'] and data['child-situation'] and data['care-plan'] and data['child-1-mother-name'] %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
               {% else %}
               <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
@@ -236,7 +236,7 @@
               <a class="task-name" href="-c110a-respondent?change=false" aria-describedby="read-declaration-completed">
                 Respondents
               </a>
-              {% if data['respondent-1-full-name'] and data['respondent-1-gender']  %}
+              {% if data['respondent-1-full-name'] and data['respondent-1-gender'] and data['respondent-1-contact-number']and data['respondent-1-child-1-relationship']and data['respondent-1-child-1-full-name']and data['respondent-1-current-address'] %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
               {% else %}
               <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->

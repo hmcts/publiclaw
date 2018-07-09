@@ -114,6 +114,16 @@ C110a Form
          {{ data['child-situation-1-address'] }}
          {{ data['child-situation-2-address'] }}
          {{ data['child-situation-3-address'] }}
+         {{ data['child-situation-4-address'] }}
+         {% if data['child-situation-5-discharge-date'] and data['child-situation-5-address']  %}
+           <strong id="eligibility-completed">Discharge date: </strong>{{ data['child-situation-5-discharge-date'] }} <br>     {{ data['child-situation-5-address'] }}
+         {% else %}
+
+         {% endif %}
+
+
+         {{ data['child-situation-others'] }}
+         {{ data['child-situation-6-address'] }}
 
 
           </dd>
