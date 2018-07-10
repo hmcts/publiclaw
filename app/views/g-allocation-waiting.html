@@ -129,7 +129,11 @@ significant person. History of suspicious death of a child in the family.</td>
 
 
 
-      <td class="govuk-table__cell "> Croydon
+      <td class="govuk-table__cell "> {% if data['hearing-location']  %}
+                {{ data['hearing-location'] }} 
+              {% else %}
+              Fox Court (South East)
+              {% endif %}
 </td>
 
 

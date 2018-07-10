@@ -241,16 +241,20 @@
   <caption class="heading-small">Key details</caption>
   <tbody>
 	  <tr> <td>Case number </td>
-		<td class="bold">#0093939983</td>
+		<td class="bold">#00388</td>
     </tr>
 	  <tr>
       <td>Tribunal center</td>
-      <td class="bold">Fox Court(South East)</td>
+      <td class="bold">{% if data['hearing-location']  %}
+                {{ data['hearing-location'] }} 
+              {% else %}
+              Fox Court (South East)
+              {% endif %}</td>
     </tr>
 		<tr>
 
 	   <tr> <td>Case start date </td>
-		<td class="bold">20th June 2018</td>
+		<td class="bold">10th July 2018</td>
     </tr>
 	   <tr> <td>Time to 26 week deadline </td>
 		<td class="bold">4 weeks</td>
