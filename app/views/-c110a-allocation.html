@@ -170,23 +170,21 @@ C110a - International element
 	  <!--reason -->
 	  <div class="govuk-form-group">
   <label class="govuk-label" for="more-detail">
-    Can you provide more detail?
-  </label>
-  <span id="more-detail-hint" class="govuk-hint">
     Set out the applicable
 paragraphs of the schedule to
-the President’s Guidance on the
+the president’s guidance on the
 distribution of business
+  </label>
+  <span id="more-detail-hint" class="govuk-hint">
+    <a href="public/images/gatekeeping-guidance-schedule.pdf" target="_blank"> View the schedule to
+    the president's guidance</a>
   </span>
+
   <textarea class="govuk-textarea" id="more-detail" name="allocation-reason" rows="5" aria-describedby="more-detail-hint">{{ data['allocation-reason'] }}</textarea>
 </div>
 
 
 
-			<br/>
-
-
-		<br/>
 
     {% if data['change'] == "true" %}
       <input class="button" type="submit" value="Save and continue">
