@@ -71,32 +71,50 @@ C110a - Others who should be given notice
   </fieldset>
 </div>
 
+<!-- Gender  -->
 
-<!-- Gender class="inline" -->
-		<div class="form-group">
-    <fieldset >
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend ">
 
-      <legend>
-        <span class="form-label">
-         Gender
-        </span>
-      </legend>
+      <!--  What is the child's gender?-->
+      Gender
 
-      <div class="multiple-choice">
-        <input id="radio-inline-1" type="radio" name="other-1-gender" value="Male" {{ checked('other-1-gender','Male') }}>
-        <label for="radio-inline-1">Male</label>
-      </div>
-      <div class="multiple-choice">
-        <input id="radio-inline-2" type="radio" name="other-1-gender" value="Female" {{ checked('other-1-gender','Female') }}>
-        <label for="radio-inline-2">Female</label>
-      </div>
-		<div class="multiple-choice">
-        <input id="radio-inline-2" type="radio" name="other-1-gender" value="Non-binary" {{ checked('other-1-gender','Non-binary') }}>
-        <label for="radio-inline-2">Non-binary</label>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="respondent-1-gender-conditional-1" name="other-1-gender" type="radio" value="Male" {{ checked('other-1-gender','Male') }} data-aria-controls="conditional-other-1-gender-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="other-1-gender-conditional-1">
+       Male
+      </label>
       </div>
 
-    </fieldset>
-  </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="other-1-gender-conditional-2" name="other-1-gender" type="radio" value="Female" {{ checked('other-1-gender','Female') }} data-aria-controls="conditional-other-1-gender-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="other-1-gender-conditional-2">
+       Female
+      </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="respondent-1-gender-conditional-3" name="other-1-gender" type="radio" value="They identify in another way" {{ checked('other-1-gender','They identify in another way') }} data-aria-controls="conditional-other-1-gender-conditional-3">
+        <label class="govuk-label govuk-radios__label" for="other-1-gender-conditional-3">
+        They identify in another way
+      </label>
+      </div>
+      <div class="govuk-radios__conditional" id="conditional-other-1-gender-conditional-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="other-1-gender-text">
+    What gender do they identify with?
+  </label>
+            <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="other-1-gender-other" type="text" value="{{ data['other-1-gender-other'] }}">
+        </div>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
+
 		<!-- Social worker detials-->
 
 <!-- Place of birth -->

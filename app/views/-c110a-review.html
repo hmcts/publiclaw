@@ -344,7 +344,12 @@ C110a Form
              Relationship to the child
             </dt>
             <dd class="cya-answer">
-  			 {{ data['respondent-1-child-1-full-name'] }}'s  {{ data['respondent-1-child-1-relationship'] }}
+              {% if data['respondent-1-child-1-full-name'] and data['respondent-1-child-1-relationship'] %}
+                       {{ data['respondent-1-child-1-full-name'] }}'s  {{ data['respondent-1-child-1-relationship'] }}
+              {% else %}
+
+              {% endif %}
+
 
             </dd>
             <dd class="cya-change">
@@ -368,7 +373,7 @@ C110a Form
               </a>
             </dd>
           </div>
-          <div>
+      <!--    <div>
               <dt class="cya-question">
                     Assessments needed for this person?
                   </dt>
@@ -394,7 +399,7 @@ C110a Form
               </a>
             </dd>
           </div>
-
+-->
 
         </dl>
         {% if data['other-1-full-name'] and data['other-1-dob-day']  %}
@@ -436,10 +441,10 @@ C110a Form
                 Gender
               </dt>
               <dd class="cya-answer">
-                {{ data['other-1-gender'] }}
+                {{ data['other-1-gender'] }}  {{ data['other-1-gender-other'] }}
             </dd>
               <dd class="cya-change">
-                <a href="-c110a-other?change=true">
+                <a href="-c110a-others?change=true">
                   Change <span class="visually-hidden"> other's date of birth</span>
                 </a>
               </dd>
@@ -492,7 +497,14 @@ C110a Form
                Relationship to the child
               </dt>
               <dd class="cya-answer">
-           {{ data['other-1-child-1-full-name'] }}'s  {{ data['other-1-child-1-relationship'] }}
+
+                {% if data['other-1-child-1-full-name'] and data['other-1-child-1-relationship'] %}
+                         {{ data['other-1-child-1-full-name'] }}'s  {{ data['other-1-child-1-relationship'] }}
+                {% else %}
+
+                {% endif %}
+
+
 
               </dd>
               <dd class="cya-change">
@@ -502,7 +514,7 @@ C110a Form
               </dd>
             </div>
 
-          <div>
+        <!--  <div>
               <dt class="cya-question " >
                Parental responsibility
               </dt>
@@ -542,7 +554,7 @@ C110a Form
                 </a>
               </dd>
             </div>
-
+-->
 
           </dl>
         {% else %}
