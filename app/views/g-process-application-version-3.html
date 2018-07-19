@@ -1,4 +1,4 @@
-{% extends "layout-jui.html" %}
+{% extends "layout-jui-v2.html" %}
 
 {% block page_title %}
   View and process applications
@@ -24,7 +24,7 @@
      <a class="govuk-c-breadcrumbs__link" href="g-applications"> Applications</a>
     </li>
 	   <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
-      C110 application #00388
+      C110A #00388
     </li>
 
   </ol>
@@ -33,144 +33,52 @@
       <h1 class="govuk-heading-l">
           <span class="govuk-caption-xl">  C110a</span>
       <!--  Application for a care, supervision or emergency protection order-->
-      Application # 00388 <div class="floating-button"><a href="g-issue-standard-directions" class="button"> Issue standard directions </a></div>
+      Application # 00388 <div class="floating-button"> <a href="g-make-allocation" class="button">Make your allocation </a></div>
       </h1>
+		
+		
 
 
 
-		 <div class="jui-casefile-page" style="margin: 0px;  width: 960px;">
+
+<div class="app-left-nav" >
+
+
+
+    <h2 class="heading-medium-">Quick links:</h2>
+	<ul class="page-contents__list"  >
+  <li ><a href="#child"> Child</a> </li>
+  <li><a href="#respondent"> Respondent </a></li>
+
+		<li><a href="#applicant"> Applicant</a></li>
+
+		<li><a href="#orders">Orders </a></li>
+		<li><a href="#hearing">Hearings need </a></li>
+		<li><a href="#grounds"> Grounds for the application </a></li>
+
+
+		<li><a href="#arrangement">
+Arrangements needed for hearing</a></li>
+		<li><a href="#international">International element</a> </li><!---->
+		<li><a href="#previous">Previous or ongoing proceedings</a> </li>
+		<li><a href="#allocation">Alloation proposal</a> </li>
+		<li><a href="#documents">Documents</a> </li>
+
+</ul>
+
+
+
+		</div>
+
+		
+		 <div class="jui-casefile-page app-right-content" >
 
         <!-- page 1 -->
         <div class="jui-casefile-page-content"  >
 
 
           <div class="jui-casefile-page-body" >
-			  
-			  
-			  <div style="padding: 20px; border: 5px solid  #005ea5 "> 
-			  
-			   
-			  <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-  <caption class="govuk-table__caption govuk-heading-s"> Gatekeeper Laurie Taylor's allocation proposal</caption>
-
-
-  <tbody class="govuk-table__body">
-
-    <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Applicant’s allocation proposal</th>
-
-
-
-      <td class="govuk-table__cell ">District Judge level
-</td>
-
-
-    </tr>
-
-
-
-    <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Reason for allocation</th>
-
-
-
-      <td class="govuk-table__cell ">Risk of serious physical or emotional harm arising from death of another child in family, a parent or other
-significant person. History of suspicious death of a child in the family.</td>
-
-
-    </tr>
-
-	  
-    <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Suggeted Judge</th>
-
-
-
-      <td class="govuk-table__cell ">Judge Jeremy Bennett
-</td>
-
-
-    </tr>
-	  <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Suggeted hearing date</th>
-
-
-
-      <td class="govuk-table__cell ">20 Jul 2018
-</td>
-
-
-    </tr>
-	    <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Suggeted hearing time</th>
-
-
-
-      <td class="govuk-table__cell ">14:00
-</td>
-
-
-    </tr>
-  <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Suggeted venue</th>
-
-
-
-      <td class="govuk-table__cell "> {% if data['hearing-location']  %}
-               {{ data['hearing-location'] }} 
-               {{ data['hearing-location'] }} 
-              {% else %}
-             Fox Court (South East)
-              {% endif %}
-</td>
-
-
-    </tr>
-<tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Any additional directions to standard directions order?
-</th>
-
-
-
-      <td class="govuk-table__cell "> No
-</td>
-
-
-    </tr>
-
-
-
-  </tbody>
-</table>
-				  
-				  <div class="govuk-box-highlight" style="background:#005ea5  ">
-
-        <p class="font-large" style="color: #fff">
-          Gatekeeper's allocation  has been <br>
-          <strong class="bold" style="color: #fff">approved by Judge Jeremy Bernnet </strong>
-        </p>
-	  <p class="font-small" style="color: #fff">Judge agrees with the gatekeeper's decision </p>
-	 </div> <a href="la-help" ></a>
-				  
-				  
-			  </div>
-
-			  <br > <h2 class="govuk-heading-m"> Application details</h2>
             <h3 class="govuk-heading-s">
               <span class="govuk-caption-xl"> </span> Key flags for gatekeeping
             </h3>
@@ -179,7 +87,7 @@ significant person. History of suspicious death of a child in the family.</td>
 
 			  <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed" style="font-size:50%!important">
 
-  <caption class="govuk-table__caption govuk-heading-s"> Child 1</caption>
+  <caption class="govuk-table__caption govuk-heading-s" id="child"> Child 1</caption>
 
 
   <tbody class="govuk-table__body">
@@ -310,7 +218,7 @@ Supervised contact with parents to be arranged.
 
 			  <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-  <caption class="govuk-table__caption govuk-heading-s"> Respondent 1</caption>
+  <caption class="govuk-table__caption govuk-heading-s" id="respondent"> Respondent 1</caption>
 
 
   <tbody class="govuk-table__body">
@@ -439,7 +347,7 @@ SE23 6FH
 </table>
 <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-  <caption class="govuk-table__caption govuk-heading-s"> Respondent 2</caption>
+  <caption class="govuk-table__caption govuk-heading-s" > Respondent 2</caption>
 
 
   <tbody class="govuk-table__body">
@@ -585,10 +493,10 @@ SE23 6FH
 
   </tbody>
 </table>
-          
+
 	   <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed" style="font-size:50%!important">
 
-  <caption class="govuk-table__caption govuk-heading-s"> Applicant</caption>
+  <caption class="govuk-table__caption govuk-heading-s" id="applicant"> Applicant</caption>
 
 
   <tbody class="govuk-table__body">
@@ -726,7 +634,7 @@ London SE1 2QH
 
 
     </tr>
-	
+
       <tr class="govuk-table__row">
 
 
@@ -766,10 +674,10 @@ London SE1 2QH
   </tbody>
 </table>
 
-	  
+
 	  <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-  <caption class="govuk-table__caption govuk-heading-s"> Orders
+  <caption class="govuk-table__caption govuk-heading-s" id="orders"> Orders
 </caption>
 
 
@@ -807,7 +715,7 @@ London SE1 2QH
 
 <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-  <caption class="govuk-table__caption govuk-heading-s"> Hearings needed</caption>
+  <caption class="govuk-table__caption govuk-heading-s" id="hearing"> Hearings needed</caption>
 
 
   <tbody class="govuk-table__body">
@@ -945,7 +853,7 @@ No
 
             <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-  <caption class="govuk-table__caption govuk-heading-s"> Grounds for the application</caption>
+  <caption class="govuk-table__caption govuk-heading-s" id="grounds"> Grounds for the application</caption>
 
 
   <tbody class="govuk-table__body">
@@ -1188,10 +1096,10 @@ Supervised contact with parents to be arranged.
 
   </tbody>
 </table> -->
-            
+
 <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-<caption class="govuk-table__caption govuk-heading-s"> Arrangements needed for hearing</caption>
+<caption class="govuk-table__caption govuk-heading-s" id="arrangement"> Arrangements needed for hearing</caption>
 
 
 <tbody class="govuk-table__body">
@@ -1329,7 +1237,7 @@ Supervised contact with parents to be arranged.
 
 			    <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-  <caption class="govuk-table__caption govuk-heading-s"> International element</caption>
+  <caption class="govuk-table__caption govuk-heading-s" id="international"> International element</caption>
 
 
   <tbody class="govuk-table__body">
@@ -1416,7 +1324,7 @@ Supervised contact with parents to be arranged.
 </table>
  <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-  <caption class="govuk-table__caption govuk-heading-s"> Previous or ongoing proceedings</caption>
+  <caption class="govuk-table__caption govuk-heading-s" id="previous"> Previous or ongoing proceedings</caption>
 
 
   <tbody class="govuk-table__body">
@@ -1524,7 +1432,7 @@ Supervised contact with parents to be arranged.
 </table>
 <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-  <caption class="govuk-table__caption govuk-heading-s"> Allocation proposal</caption>
+  <caption class="govuk-table__caption govuk-heading-s" id="allocation"> Allocation proposal</caption>
 
 
   <tbody class="govuk-table__body">
@@ -1570,7 +1478,7 @@ significant person. History of suspicious death of a child in the family.</td>
 
 <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-  <caption class="govuk-table__caption govuk-heading-s"> Annex documents</caption>
+  <caption class="govuk-table__caption govuk-heading-s" id="documents"> Annex documents</caption>
 
 
   <tbody class="govuk-table__body">
@@ -1602,7 +1510,7 @@ Social work statement and genogram</th>
 
 
     </tr>
-	  
+
 	  <tr class="govuk-table__row">
 
 
@@ -1635,7 +1543,7 @@ Care plan</th>
 
   </tbody>
 </table>
-
+<a href="g-make-allocation" class="button">Make your allocation </a>
 
           </div>
 
@@ -1655,7 +1563,7 @@ Care plan</th>
 
 
 
-		
+
 <br/>
 
 
