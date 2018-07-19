@@ -206,7 +206,7 @@ function addInput(divName){
 
           var newdiv = document.createElement('div');
 
-          newdiv.innerHTML =  "<div class='form-group'></div><label class='form-label' for='child-2-full-name'> Child’s full name <span class='form-hint'>As shown on the birth certificate or passport</span></label> <input type='text' class='form-control' id='child-2-full-name'>";
+          newdiv.innerHTML =  "<h2 class='heading-medium'>Please note that in the real online application you will be able to add more children. This prototype is for demo purpose only.</h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Child’s full name <span class='form-hint'>As shown on the birth certificate or passport</span></label> <input type='text' class='form-control' id='child-2-full-name'>";
 
           document.getElementById(divName).appendChild(newdiv);
 
@@ -234,7 +234,7 @@ function addInput(divName){
 
 <br/><br/>
 
-			<div class="form-group inline">
+			<div class="form-group inline" style="display: none;">
 
 			<legend>
 
@@ -267,7 +267,7 @@ Do you expect that assessments will be needed in this case?
 </div>
 
 			</div>
-			<div class="form-group inline">
+			<div class="form-group inline" style="display: none;">
 
 			<legend>
 
@@ -326,7 +326,7 @@ function addInputb(divNameb){
 
           var newdivb = document.createElement('div');
 
-          newdivb.innerHTML =  "<h2 class='govuk-heading-m'> Others</h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Full name </label> <input type='text' class='form-control' id='child-2-full-name'>";
+          newdivb.innerHTML =  "<h2 class='govuk-heading-m'> Please note that in the real online application you will be able to add more respondents. This prototype is for demo purpose only. </h2><h2 class='govuk-heading-m'> Respondent 2</h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Full name </label> <input type='text' class='form-control' id='child-2-full-name'>";
 
           document.getElementById(divNameb).appendChild(newdivb);
 
@@ -348,7 +348,7 @@ function addInputb(divNameb){
          <!-- Entry 1<br><input type="text" name="myInputs[]">-->
 
      </div>
-     <input type="button" class="button" value="Add another " onClick="addInputb('dynamicInputb');">
+     <input type="button" class="button" value="Add more respondents " onClick="addInputb('dynamicInputb');">
 
 
 

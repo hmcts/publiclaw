@@ -211,7 +211,7 @@
 
 	<div class="govuk-grid-row govuk-grid-column-two-thirds column-minimum govuk-clearfix">
     <h1 class="govuk-heading-l">
-        <span class="govuk-caption-xl">  C110a</span>
+        <span class="govuk-caption-xl">  C110A</span>
     Apply for a care, supervision or emergency protection order
 
     </h1>
@@ -248,18 +248,22 @@
               <a class="task-name" href="-c110a-applicant?change=false" aria-describedby="read-declaration-completed">
                 Applicant
               </a>
-              <strong class="task-completed" id="read-declaration-completed">Completed</strong>
+               {% if data['applicant-full-name'] and data['applicant-contact-name'] and data['applicant-job-title']and data['applicant-address']and data['applicant-mobile-number']and data['la-dx-number'] %}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
             </li>
-			 <!--  <li class="task-list-item">
+			  <li class="task-list-item">
               <a class="task-name" href="-c110a-others?change=false" aria-describedby="read-declaration-completed">
                 Others who should be given notice
               </a>
-              {% if data['other-1-full-name'] and data['other-1-gender']  %}
+              {% if data['other-1-full-name'] and data['other-1-gender'] and data['other-1-place-birth']  %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
               {% else %}
-             <strong class="task-completed" id="eligibility-completed">Not completed</strong>
+             
               {% endif %}
-            </li>-->
+            </li><!-- -->
           </ul>
         </li>
         <li>
@@ -372,7 +376,11 @@
               <a class="task-name" href="-c110a-upload?change=false">
                  Upload documents
               </a>
+                {% if data['ammex-documents-01'] and data['ammex-documents-02'] and data['ammex-documents-03'] and data['ammex-documents-04'] %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
             </li>
 
           </ul>

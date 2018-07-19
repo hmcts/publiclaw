@@ -24,7 +24,7 @@ C110a - Others who should be given notice
 
 
           {% if data['change'] == "true" %}
-      		  <form action="-c110a-review">
+      		  <form action="-c110a-review#others">
 
           {% else %}
 
@@ -145,12 +145,12 @@ C110a - Others who should be given notice
   <input type="text" class="form-control" id="Mother-1-full-name" name="other-1-child-1-relationship" type="text" value="{{ data['other-1-child-1-relationship'] }}">
 </div>
 
-<div class="panel-border-narrow panel inline">
+<div class="panel-border-narrow panel ">
         <legend>
-          <h1 class="heading-small">
-
-          </h1>
-          <span class="body-text">Parental responsibility</span>
+          <h3 class="form-label">
+Parental responsibility
+          </h3>
+          <span class="body-text"> </span>
         </legend>
 
         <div class="multiple-choice" >
@@ -163,7 +163,7 @@ C110a - Others who should be given notice
         </div>
 	<div class="multiple-choice" >
           <input id="radio-parental-res-4" type="radio" name="other-1-child-1-parental-responsibility" value="Do not know" {{ checked('other-1-child-1-parental-responsibility','Do not know') }}>
-          <label for="radio-parental-res-4">Don't Know</label>
+          <label for="radio-parental-res-4">Don't know</label>
         </div>
       </div>
 
@@ -189,7 +189,7 @@ function addInput(divName){
 
           var newdiv = document.createElement('div');
 
-          newdiv.innerHTML =  "<h2 class='heading-medium'> Child 2 </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Child’s full name <span class='form-hint'>As shown on the birth certificate or passport</span></label> <input type='text' class='form-control' id='child-2-full-name'>";
+          newdiv.innerHTML =  "<h2 class='govuk-heading-m'> Please note that in the real online application you will be able to add more children. This prototype is for demo purpose only. </h2> <h2 class='heading-medium'> Child 2 </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Child’s full name <span class='form-hint'>As shown on the birth certificate or passport</span></label> <input type='text' class='form-control' id='child-2-full-name'>";
 
           document.getElementById(divName).appendChild(newdiv);
 
@@ -217,7 +217,7 @@ function addInput(divName){
 
 <br/><br/>
 
-			<div class="form-group inline">
+			<div class="form-group inline" style="display: none;">
 
 			<legend>
 
@@ -250,7 +250,7 @@ Do you expect that assessments will be needed in this case?
 </div>
 
 			</div>
-			<div class="form-group inline">
+			<div class="form-group inline" style="display: none;">
 
 			<legend>
 
@@ -309,7 +309,7 @@ function addInputb(divNameb){
 
           var newdivb = document.createElement('div');
 
-          newdivb.innerHTML =  "<h2 class='heading-medium'>Other 2 </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Full name </label> <input type='text' class='form-control' id='child-2-full-name'>";
+          newdivb.innerHTML =  "<h2 class='govuk-heading-m'> Please note that in the real online application you will be able to add more people. This prototype is for demo purpose only. </h2> <h2 class='heading-medium'>Other 2 </h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Full name </label> <input type='text' class='form-control' id='child-2-full-name'>";
 
           document.getElementById(divNameb).appendChild(newdivb);
 
