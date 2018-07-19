@@ -30,7 +30,7 @@ C110a - International element
 
 
 			 <h1 class="govuk-heading-xl">
-         Allocation proposal and other proceedings
+         Other proceedings and allocation proposal 
         </h1>
 
 <div class="govuk-form-group">
@@ -129,6 +129,8 @@ C110a - International element
       <h3 class="govuk-label">
         Applicant’s allocation proposal
       </h3>
+		<span class="form-hint">Should be filled by solicitor that has good knowledge of the case based on the  <a href="public/images/gatekeeping-guidance-schedule.pdf" target="_blank"> 
+    president's guidance on allocation</a></span>
     </legend>
     <div class="govuk-radios">
       <div class="govuk-radios__item">
@@ -170,14 +172,11 @@ C110a - International element
 	  <!--reason -->
 	  <div class="govuk-form-group">
   <label class="govuk-label" for="more-detail">
-    Set out the applicable
-paragraphs of the schedule to
-the president’s guidance on the
-distribution of business
+    Set out the rationale behind allocation proposal. 
   </label>
-  <span id="more-detail-hint" class="govuk-hint">
-    <a href="public/images/gatekeeping-guidance-schedule.pdf" target="_blank"> View the schedule to
-    the president's guidance</a>
+  <span id="more-detail-hint" class="govuk-hint">Use applicable
+paragraphs from the
+    <a href="public/images/gatekeeping-guidance-schedule.pdf" target="_blank"> president’s guidance on allocation</a>
   </span>
 
   <textarea class="govuk-textarea" id="more-detail" name="allocation-reason" rows="5" aria-describedby="more-detail-hint">{{ data['allocation-reason'] }}</textarea>
