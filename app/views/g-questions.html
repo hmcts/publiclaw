@@ -1,7 +1,7 @@
 {% extends "layout-jui.html" %}
 
 {% block page_title %}
- Issue new direction - Case #9393939
+ Questions 
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@
    </span>
    </p>
  </div>-->
- <div class="jui-casebar" style="padding:10px 16px 20px 20px; display: none;"  >
+ <div class="jui-casebar" style="padding:10px 16px 20px 20px;">
 
   <div class="jui-width-container">
 
@@ -27,7 +27,7 @@
 
     <div class="jui-casebar__options">
 
-     <nav class="jui-case-actions" style="display: none;">
+     <nav class="jui-case-actions">
   <ul class="jui-case-actions__list">
 
       <li class="jui-case-actions__item">
@@ -35,7 +35,7 @@
       </li>
 
       <li class="jui-case-actions__item">
-        <a class="jui-case-actions__link" href="g-list-for-hearing">List for hearing</a>
+        <a class="jui-case-actions__link" href="g-list-got-hearing">List for hearing</a>
       </li>
 
       <li class="jui-case-actions__item">
@@ -53,7 +53,7 @@
 </div>
 
  <div > </div >
-  <div class="app-pane__nav" style="display: none;">
+  <div class="app-pane__nav">
 <nav class="app-navigation govuk-clearfix">
   <ul class="app-navigation__list">
     <li >
@@ -74,7 +74,7 @@
     <li>
       <a class="govuk-link" href="g-timeline" data-topnav="timeline" >Status & timeline</a>
     </li>
-	  <li>
+	  <li class="app-navigation--current-page">
       <a class="govuk-link" href="g-questions" data-topnav="Question" >Questions</a>
     </li>
   </ul>
@@ -242,46 +242,77 @@
 
 	<div class="govuk-grid-row column-minimum govuk-clearfix">
 		<br/>
+    <h1 class="govuk-heading-l">
+        <!--<span class="govuk-caption-l"> Case #0093939983</span>-->
+     Questions<div class="floating-button"> <a href="g-questions-ask" class="button">Ask a new question</a></div>
+
+    </h1>
+		
+		
+		
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+     
+	  
+		<table>
+  <thead>
+    <tr>
+      <th scope="col">Questions</th>
+      <th class="numeric" scope="col">Due date and time</th>
+      <th class="numeric" scope="col">Party</th>
+		<th class="numeric" scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="g-question-view.html"> Question 1 </a></th>
+      <td class="numeric">22 July 2018 <span class="grey-text"> at</span> 10:00</td>
+      <td class="numeric">Local Authority</td>
+		<td class="numeric"><span class="task-completed">Replied</span></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="g-question-view.html"> Question 2  </a></th>
+      <td class="numeric">27 July 2018 <span class="grey-text"> at</span> 18:00</td>
+      <td class="numeric">Local Authority</td>
+		<td class="numeric"><span class="">Waiting on</span></td>
+    </tr>
+	   <tr>
+      <th scope="row"><a href="g-question-view.html"> Question 3 </a></th>
+      <td class="numeric">28 July 2018 <span class="grey-text"> at</span> 09:00</td>
+      <td class="numeric">Local Authority</td>
+		<td class="numeric"><span class="">Waiting on</span></td>
+    </tr>
+	
+    <tr>
+      <th scope="row"><a href="g-question-view.html"> Question 4 </a></th>
+      <td class="numeric">26 July 2018 <span class="grey-text"> at</span> 10:00</td>
+      <td class="numeric">CAFCASS</td>
+		<td class="numeric"><span class="task-completed">Replied</span></td>
+    </tr>
+	  <tr>
+      <th scope="row"><a href="g-question-view.html"> Question 5 </a></th>
+      <td class="numeric">27 July 2018 <span class="grey-text"> at</span> 18:00</td>
+      <td class="numeric">CAFCASS</td>
+		<td class="numeric"><span class="task-completed">Replied</span></td>
+    </tr>
+    <!--<tr>
+      <th scope="row"><a href="la-directions-view.html">Directions form Judge to get evidence</a></th>
+      <td class="numeric">15/02/2018</td>
+      <td class="numeric">Local Authority</td>
+		<td class="numeric"><span class="task-incomplete">Incomplete</span></td>
+    </tr>-->
+	   <tr>
+      <th scope="row"><a href="g-question-view.html"> Question 6</a></th>
+      <td class="numeric">27 July 2018 <span class="grey-text"> at</span> 18:00</td>
+      <td class="numeric">Parent's solicitor</td>
+		<td class="numeric"><span class="task-completed">Replied</span></td>
+    </tr>
+	 
     
-		<div class="govuk-width-container">
-
-  <div class="govuk-main-wrapper" style=" padding: 5px 0 0 20px;">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds-">
-        <div class="govuk-panel govuk-panel--confirmation">
-          <h2 class="govuk-panel__title">
-            Your allocation decision has been sent to judge for approval
-          </h2>
-          <div class="govuk-panel__body">
-           Application number<br><strong>#00388 </strong>
-          </div>
-        </div>
-
-        <p class="govuk-body">Judge Jeremy Bennett has be sent an email with a link to view the application and your allocation. </p> <p> <a href="g-applications-step-2.html">Return to applications</a> to see if the judge has approved your decision.</p>
-		 
-		 
-
-        <h3 class="govuk-heading-m">What happens next</h3>
-
-<p>The Judge may:</p>
-
-      <ul class="govuk-list govuk-list--bullet">
-		  <li> approve your allocation decision 
-        </li>
-        <li> edit allocation decision or
-        </li>
-        <li> contact you to ask you for more information.</li>
-
-      </ul>
-
-        
-<p class="govuk-body">After the Judge approves your allocation, you will receive a confirmation email. Then you can list case managemnet hearing and issue standard directions.  </p>  
-       
-      </div>
-    </div>
-  </div>
-
-</div>
+  </tbody>
+</table>
+	  
   </div>
   
 </div>
