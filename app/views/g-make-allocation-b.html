@@ -18,7 +18,7 @@
 		<div class="govuk-c-breadcrumbs">
   <ol class="govuk-c-breadcrumbs__list">
     <li class="govuk-c-breadcrumbs__list-item">
-      <a class="govuk-c-breadcrumbs__link" href="g-dashboard">Dashboard-b</a>
+      <a class="govuk-c-breadcrumbs__link" href="g-dashboard-b">Dashboard</a>
     </li>
     <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
      <a class="govuk-c-breadcrumbs__link" href="g-applications-b"> Applications</a>
@@ -36,10 +36,15 @@
       <h1 class="govuk-heading-l">
 
       <!--  Application for a care, supervision or emergency protection order-->
-      Make your allocation
+      Make your allocation and list for hearing
       </h1>
+		<h2 class="govuk-heading-m">
 
-<form action="g-standard-directions-g.html">
+      <!--  Application for a care, supervision or emergency protection order-->
+      Please discuss the case with your team.  Then make your allocation and list for hearings. You can speak to DJ, admin staff or schedule and listings team to get information on availability of judges and venue for hearing. 
+      </h2>
+
+<form action="g-standard-directions-b.html">
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -134,7 +139,7 @@
 </div>
 
 	   <div class="form-group">
-  <label class="form-label" for="select-box"> <span class="govuk-label--s"> Suggest Judge </span></label>
+  <label class="form-label" for="select-box"> <span class="govuk-label--s"> Hearing Judge </span></label>
   <select class="form-control" id="select-box" name="judge"  value="{{ data['judge'] }}">
     <option>Judge Jeremy Bennett</option>
     <option>Judge Arpitha Gowda </option>
@@ -143,7 +148,7 @@
   </select>
 </div>
 		<a href=""><h3 class="heading-small" style="text-decoration: underline"> View judge's calendar</h3></a>
-		<span class="grey-text"> (Calendar opens in a new window)</span><br><br>
+		<span class="grey-text">Please note that in the real online system you will be able to view calendar for all judges. Or talk to schedule and listings team to get information on Judge's availability. (Calendar will open in a new window)This prototype is for demo purpose only.</span><br><br>
 
 	  <!-- Date  -->
 
@@ -280,7 +285,7 @@ function addInput(divName){
 <br/><br/>
 
 	  <button type="submit" class="govuk-button">
- Send to judge for approval
+ Approve application and issue standard directions
 </button>
 	  </form>
 
