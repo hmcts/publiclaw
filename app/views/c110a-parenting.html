@@ -1,0 +1,164 @@
+{% extends "layout-la.html" %}
+
+{% block page_title %}
+
+C110a - How Complex
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum">
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
+
+
+
+{% if data['change'] == "true" %}
+  <form action="c110a-review#parenting">
+
+{% else %}
+
+  <form action="c110a">
+{% endif %}
+
+			 <h1 class="govuk-heading-xl">
+        Factors affecting parenting
+        </h1>
+<h2 class="govuk-heading-m"> Is there evidence of any of the following?</h2>
+
+			<fieldset>
+
+      <legend>
+
+        <span class="body-text">Alcohol & drugs</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="alcohol-and-drugs-yes">
+        <input id="radio-home-address" type="radio" name="alcohol-and-drugs" value="Yes" {{ checked('alcohol-and-drugs','Yes') }}>
+        <label for="radio-home-address">Yes </label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="alcohol-and-drugs-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="alcohol-and-drugs-details" name="alcohol-and-drugs-details" rows="4" cols="80">{{ data['alcohol-and-drugs-details'] }}</textarea>
+
+
+
+
+</div>
+      <div class="multiple-choice" >
+       <input id="radio-other-address" type="radio" name="alcohol-and-drugs" value="No" {{ checked('alcohol-and-drugs','No') }}>
+        <label for="radio-other-address">No  </label>
+      </div>
+
+
+    </fieldset>
+
+
+			<br/>
+
+			<fieldset>
+
+      <legend>
+
+        <span class="body-text">Mental health issues</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="mental-health-issues-yes">
+        <input id="radio-home-address" type="radio" name="mental-health-issues" value="Yes" {{ checked('mental-health-issues','Yes') }}>
+        <label for="radio-home-address">Yes </label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="mental-health-issues-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="mental-health-issues-details" rows="4" cols="80">{{ data['mental-health-issues-details'] }}</textarea>
+
+
+
+
+</div>
+      <div class="multiple-choice" >
+       <input id="radio-other-address" type="radio" name="mental-health-issues" value="No" {{ checked('mental-health-issues','No') }}>
+        <label for="radio-other-address">No  </label>
+      </div>
+
+
+    </fieldset><br/>
+				<fieldset>
+
+      <legend>
+
+        <span class="body-text">Domestic violence</span>
+      </legend>
+
+      <div class="multiple-choice" data-target="domestic-violence-yes">
+        <input id="radio-home-address" type="radio" name="domestic-violence" value="Yes" {{ checked('domestic-violence','Yes') }}>
+        <label for="radio-home-address">Yes </label>
+      </div>
+
+      <div class="panel panel-border-narrow js-hidden" id="domestic-violence-yes">
+
+        <legend>
+
+          <span class="body-text">Give details</span>
+        </legend>
+<textarea class="form-control" type="text" id="urgency-reason" name="domestic-violence-details" rows="4" cols="80"> {{ data['domestic-violence-details'] }}</textarea>
+
+
+
+
+</div>
+      <div class="multiple-choice" >
+       <input id="domestic-violence" type="radio" name="domestic-violence" value="No" {{ checked('domestic-violence','No') }}>
+        <label for="domestic-violence">No  </label>
+      </div>
+
+
+    </fieldset>
+			<!-- Previous proceedings-->
+		<br/>
+
+
+			<br/>
+
+
+		<br/>
+
+    {% if data['change'] == "true" %}
+      <input class="button" type="submit" value="Save and continue">
+
+    {% else %}
+
+    <input class="button" type="submit" value="Save">
+    {% endif %}
+
+</form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-la.html" %}
 
 {% block page_title %}
  (C110A) - Apply for a care, supervision or emergency protection order
@@ -197,53 +197,63 @@
   items: [
     {
       text: "Dashboard",
-      href: "la-dashboard"
+      href: "la-dashboard-v3"
     },
-    {
-      text: "Applications",
-      href: "la-applications"
-    },
+    
     {
       text: "C110A application"
     }
   ]
 }) }}
 
-	<div class="govuk-grid-row govuk-grid-column-two-thirds column-minimum govuk-clearfix">
+	<div class="govuk-grid-row  govuk-grid-column-full column-minimum govuk-clearfix">
     <h1 class="govuk-heading-l">
         <span class="govuk-caption-xl">  C110A</span>
-    Apply for a care, supervision or emergency protection order
+    Apply for a care, supervision or emergency protection order or other order under part 4 of the children act 1989
+
 
     </h1>
 
       <ol class="task-list">
 		  <li>
           <h2 class="task-list-section">
-            <span class="task-list-section-number">1. </span>Select the orders you applying for
+            <span class="task-list-section-number">1. </span>Select the orders sought and hearing needed
           </h2>
           <ul class="task-list-items">
             <li class="task-list-item">
               <a class="task-name" href="c110a-orders?change=false" aria-describedby="eligibility-completed">
-                Orders needs
+                Orders needed
               </a>
-              {% if data['key-dates'] and data['child-1-full-name'] and data['child-1-dob-year'] and data['child-1-gender'] and data['child-situation'] and data['care-plan'] and data['child-1-mother-name'] %}
+              {% if data['order-type']  %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
               {% else %}
               <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
               {% endif %}
             </li>
-            <li class="task-list-item">
+			   <li class="task-list-item">
+              <a class="task-name" href="c110a-hearing?change=false" aria-describedby="contact-details-completed">
+                Hearing needed
+              </a>
+              {% if data['hearing-24-hours'] and data['hearing-12-days'] and data['without-notice'] and data['reduced-notice'] and data['respondents-notified']%}
+                <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% else %}
+              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+              {% endif %}
+
+
+            </li>
+            <!--<li class="task-list-item">
               <a class="task-name" href="-c110a-respondent?change=false" aria-describedby="read-declaration-completed">
                 Addtional information required 
               </a>
               {% if data['respondent-1-full-name'] and data['respondent-1-gender'] and data['respondent-1-contact-number']and data['respondent-1-child-1-relationship']and data['respondent-1-child-1-full-name']and data['respondent-1-current-address'] %}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
               {% else %}
-              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+             
               {% endif %}
 
 
-            </li>
+            </li>-->
 			  
           </ul>
         </li>
@@ -253,7 +263,7 @@
           </h2>
           <ul class="task-list-items">
             <li class="task-list-item">
-              <a class="task-name" href="-c110a-children?change=false" aria-describedby="eligibility-completed">
+              <a class="task-name" href="c110a-children?change=false" aria-describedby="eligibility-completed">
                 Children
               </a>
               {% if data['key-dates'] and data['child-1-full-name'] and data['child-1-dob-year'] and data['child-1-gender'] and data['child-situation'] and data['care-plan'] and data['child-1-mother-name'] %}
@@ -263,7 +273,7 @@
               {% endif %}
             </li>
             <li class="task-list-item">
-              <a class="task-name" href="-c110a-respondent?change=false" aria-describedby="read-declaration-completed">
+              <a class="task-name" href="c110a-respondent?change=false" aria-describedby="read-declaration-completed">
                 Respondents
               </a>
               {% if data['respondent-1-full-name'] and data['respondent-1-gender'] and data['respondent-1-contact-number']and data['respondent-1-child-1-relationship']and data['respondent-1-child-1-full-name']and data['respondent-1-current-address'] %}
@@ -275,7 +285,7 @@
 
             </li>
 			  <li class="task-list-item">
-              <a class="task-name" href="-c110a-applicant?change=false" aria-describedby="read-declaration-completed">
+              <a class="task-name" href="c110a-applicant?change=false" aria-describedby="read-declaration-completed">
                 Applicant
               </a>
                {% if data['applicant-full-name'] and data['applicant-contact-name'] and data['applicant-job-title']and data['applicant-address']and data['applicant-mobile-number']and data['la-dx-number'] %}
@@ -285,7 +295,7 @@
               {% endif %}
             </li>
 			  <li class="task-list-item">
-              <a class="task-name" href="-c110a-others?change=false" aria-describedby="read-declaration-completed">
+              <a class="task-name" href="c110a-others?change=false" aria-describedby="read-declaration-completed">
                 Others who should be given notice
               </a>
               {% if data['other-1-full-name'] and data['other-1-gender'] and data['other-1-place-birth']  %}
@@ -311,22 +321,22 @@
               
               {% endif %}
 
-            </li>-->
-            <li class="task-list-item">
+            </li> <li class="task-list-item">
               <a class="task-name" href="-c110a-urgency?change=false" aria-describedby="contact-details-completed">
                 Hearings needed
               </a>
               {% if data['hearing-24-hours'] and data['hearing-12-days'] and data['without-notice'] and data['reduced-notice'] and data['respondents-notified']%}
                 <strong class="task-completed" id="eligibility-completed">Completed</strong>
               {% else %}
-              <!--  <strong class="task-completed" id="eligibility-completed">Not completed</strong> -->
+            
               {% endif %}
 
 
-            </li>
+            </li>-->
+           
 
 			  <li class="task-list-item">
-              <a class="task-name" href="-c110a-grounds?change=false">
+              <a class="task-name" href="c110a-grounds?change=false">
                 Grounds for application
               </a>
               {% if data['grounds-for-application'] and data['threshold-evidence']  %}
@@ -338,7 +348,7 @@
             </li>
 
             <li class="task-list-item">
-                  <a class="task-name" href="-c110a-risk-harm?change=false">
+                  <a class="task-name" href="c110a-risk-harm?change=false">
                    Risks and harm to children
                   </a>
                   {% if data['physical-harm'] and data['emotional-harm'] and data['sexual-abuse'] and data['neglect']  %}
@@ -348,7 +358,7 @@
                   {% endif %}
                 </li>
                 <li class="task-list-item">
-                      <a class="task-name" href="-c110a-parenting?change=false">
+                      <a class="task-name" href="c110a-parenting?change=false">
                        Factors affecting parenting
                       </a>
                         {% if data['alcohol-and-drugs'] and data['mental-health-issues'] and data['domestic-violence'] %}
@@ -358,7 +368,7 @@
                       {% endif %}
                     </li>
                 <li class="task-list-item">
-                  <a class="task-name" href="-c110a-international?change=false">
+                  <a class="task-name" href="c110a-international?change=false">
                    International element
                   </a>
                   {% if data['international-element'] and data['genogram-outside-uk'] and data['outside-uk'] and data['proceedings-outside-uk']  %}
@@ -368,7 +378,7 @@
                   {% endif %}
                 </li>
 			  <li class="task-list-item">
-              <a class="task-name" href="-c110a-allocation?change=false">
+              <a class="task-name" href="c110a-allocation?change=false">
                Other proceedings and allocation proposal
               </a>
               {% if data['previous-proceedings'] and data['allocation-proposal'] %}
@@ -378,7 +388,7 @@
               {% endif %}
             </li>
             <li class="task-list-item">
-              <a class="task-name" href="-c110a-attending?change=false">
+              <a class="task-name" href="c110a-attending?change=false">
               Attending hearing
               </a>
               {% if data['interpreter'] and data['intermediary'] and data['litigation-capacity-issues'] and data['learning-disability']  and data['welsh'] and data['security'] %}
@@ -403,7 +413,7 @@
           </h2>
           <ul class="task-list-items">
             <li class="task-list-item">
-              <a class="task-name" href="-c110a-upload?change=false">
+              <a class="task-name" href="c110a-upload?change=false">
                  Upload documents
               </a>
                 {% if data['ammex-documents-01'] and data['ammex-documents-02'] and data['ammex-documents-03'] and data['ammex-documents-04'] %}
@@ -424,7 +434,7 @@
           </h2>
           <ul class="task-list-items">
             <li class="task-list-item">
-              <a class="task-name" href="-c110a-review">
+              <a class="task-name" href="c110a-review">
                 Check your answers before submitting
               </a>
             </li>

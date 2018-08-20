@@ -5,6 +5,8 @@
 
 
 <style>
+	
+	
 	.jui-casebar{padding:10px 16px 20px 20px; }
 
 	.govuk-table__header{ width: 290px; font-size: 15px; }
@@ -384,7 +386,15 @@ section > table th {
 	display: block;
 	clear: both;
 }
-	
+	@media screen and (max-width: 480px) {
+
+		.app-mobile-hide{display: none;}
+	   .notifications-menu-view{ display: none;}
+
+		.jui-casefile-page-content{ padding: 5px!important; box-shadow:#fff!important; clear: both; width: 360px!important; }
+		.jui-casefile-page{ padding: 5px!important }
+		.floating-button{  display: block; width: 100%; margin: 2px; clear: both;
+		}
 </style>
 
 <script type="text/javascript">

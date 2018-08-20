@@ -59,7 +59,7 @@
 
 
 	<a href="index"   style="color:#fff; text-decoration: none; font-family:arial; font-weight:bold;" class="app-hide-mobile" >Signout</a></div><div style="float:right; margin: 5px 15px;" class="app-hide-mobile" >   <a href="la-dashboard" style="color:#fff; text-decoration: none; font-family:arial; font-weight:bold;">Dashboard</a></div>
-  <div style="float:right;" class="notifications-container"><ul class="gn-tools" role="menubar" style="background: #000000 ; padding:  4px 8px 2px 2px ;">
+  <!--<div style="float:right;" class="notifications-container"><ul class="gn-tools" role="menubar" style="background: #000000 ; padding:  4px 8px 2px 2px ;">
 		<li role="menuitem" id="notifications">
 						<div class="view notifications-menu-view" id="yui_3_16_0_1_1529615275985_276"><a class="gn-title c-notifications-menu" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-label="Notifications" data-rapid_p="182" href="la-notifications">
 	<span class="c-notification-icon" aria-hidden="true">
@@ -77,7 +77,7 @@
 					</li>
 
 			</ul></div >
-
+-->
   <div class="app-header-mobile-nav-toggler-wrapper">
     <button id="app-mobile-nav-toggler" class="govuk-button app-header-mobile-nav-toggler js-app-mobile-nav-toggler" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="app-mobile-nav">
       Menu
@@ -86,12 +86,12 @@
 </div>
 </header>
   </div>
-  <div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3"><div style="float: right; padding: 5px 10px 5px 0; "> English&nbsp;| <a href="#">   Welsh (Cymraeg)</a></div>
+  <div class="govuk-phase-banner govuk-!-padding-left-3 govuk-!-padding-right-3"><!--<div style="float: right; padding: 5px 10px 5px 0; "> English&nbsp;| <a href="#">   Welsh (Cymraeg)</a></div>-->
 <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
 Alpha
 </strong>
 <span class="govuk-phase-banner__text">
-    This is a new service – your <a class="govuk-link" href="feedback">feedback</a> will help us to improve it.
+    This is a new service – your <a class="govuk-link" href="-feedback">feedback</a> will help us to improve it.
   </span>
 </p>
 </div>
@@ -103,57 +103,21 @@ Alpha
 	<details class="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-     Contact us for help
+     Do you need help?
     </span>
   </summary>
   <div class="govuk-details__text">
-     <h3 class="govuk-heading-m">Telephone</h3>
+     
+			  <h2 class="govuk-heading-m">Email</h2>
+          <p><a href="send-a-message" target="_blank"> Send us a message </a> (Opens in a new page)
+<br> We’ll get back to you within 2 days.</p>
 
-<p> 0300 303 0648 (Monday to Friday 9am to 5pm)</p>
-  <h3 class="govuk-heading-m">Email</h3>
-<p>Email:<a href="#">  customersupportpubliclaw@hmcts.gsi.gov.uk</a> (Responses can take up to 2 working days)</p>
-	  
-	    <h3 class="govuk-heading-m">Or tell us what you need help with </h3>
-	  <p> Don't include personal or financial infromation, for example, Your National insurance number or credit card details. </p>
-	  
-	  <!-- What are you doing-->
+			   <h2 class="govuk-heading-m">Live chat</h2>
+          <p><a href="#ttps://hmcts.dcbp.co.uk/Divorce.htm" target="_blank"> Open live chat. </a> (Opens in a new page)
+<br>Monday to Friday, 9.00am to 5.00pm.</p>
+          <h2 class="govuk-heading-m">Telephone</h2>
+          <p>0300 123 7050 <br>  (Monday to Friday, 9.00am to 5.00pm)</p>
 
-<div class="govuk-form-group">
-<label class="govuk-label-s" for="more-detail">
-What are you doing?
-</label>
-<span id="key-dates-hint" class="govuk-hint">
-  
-</span>
-<textarea class="govuk-textarea govuk-!-width-one-half" id="what-are-you-doing" name="what-are-you-doing" rows="3" aria-describedby="what-are-you-doing-hint">{{ data['what-are-you-doing'] }} </textarea>
-</div>
-	  	  <!-- What are you doing-->
-
-<div class="govuk-form-group">
-<label class="govuk-label-s" for="more-detail">
-What happened?
-</label>
-<span id="key-dates-hint" class="govuk-hint">
-  Include any error messages that you saw
-</span>
-<textarea class="govuk-textarea govuk-label govuk-!-width-one-half" id="what-happened" name="what-happened" rows="3" aria-describedby="what-happened">{{ data['what-happened'] }} </textarea>
-</div>
-	  
-	  <!-- Email address -->
-
-<div class="govuk-form-group">
-  <label class="govuk-label govuk-!-width-one-half" for="child-1-full-name">
-    <span class="govuk-label---s">  Email address </span>
-  </label>
-	<span id="key-dates-hint" class="govuk-hint">
-  We'll only use this to reply to you
-</span>
-  <input class="govuk-input govuk-!-width-one-half" id="fyour-email-address" name="your-email-address" type="text" value="{{ data['your-email-address'] }}">
-</div>
-
-	  <button type="submit" class="govuk-button">
-  Send message
-</button>
   </div>
 </details>
 	</div>

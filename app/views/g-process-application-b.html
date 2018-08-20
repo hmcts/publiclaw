@@ -1,4 +1,4 @@
-{% extends "layout-jui-v2.html" %}
+{% extends "layout-jui-v3.html" %}
 
 {% block page_title %}
   View and process applications
@@ -18,11 +18,9 @@
 		<div class="govuk-c-breadcrumbs">
   <ol class="govuk-c-breadcrumbs__list">
     <li class="govuk-c-breadcrumbs__list-item">
-      <a class="govuk-c-breadcrumbs__link" href="g-dashboard-b">Dashboard</a>
+      <a class="govuk-c-breadcrumbs__link" href="g-dashboard-v3">Dashboard</a>
     </li>
-    <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
-     <a class="govuk-c-breadcrumbs__link" href="g-applications-b"> Applications</a>
-    </li>
+    
 	   <li class="govuk-c-breadcrumbs__list-item" aria-current="page">
       C110A 00388
     </li>
@@ -33,7 +31,7 @@
       <h1 class="govuk-heading-l">
           <span class="govuk-caption-xl">  C110A</span>
       <!--  Application for a care, supervision or emergency protection order-->
-      Application 00388 - 10 Jul 2018<div class="floating-button"><a href="g-make-allocation-b" class="button">Make your allocation </a> <!--<button onclick="myFunction()" class="button" style="font-size: 80%">Print </button>--></div>
+      Application 00388<div class="floating-button"><a href="g-make-allocation-b" class="button">Make your allocation </a> <!--<button onclick="myFunction()" class="button" style="font-size: 80%">Print </button>--></div>
       </h1>
 		<!--<h2 class="govuk-heading-m"> Please scroll down to view all the information in the application. </h2>-->
 		
@@ -77,7 +75,7 @@ Arrangements needed for hearing</a></li>
 		</div>
 
 		
-		 <div class="jui-casefile-page	 app-right-content-" style="width: 100%;" >
+		 <div class="jui-casefile-page	 app-right-content-" style="width: 100%; clear: both;" >
 
         <!-- page 1 -->
         <div class="jui-casefile-page-content"  >
@@ -85,12 +83,225 @@ Arrangements needed for hearing</a></li>
 
           <div class="jui-casefile-page-body" >
 
-            <h3 class="govuk-heading-s">
-              <span class="govuk-caption-xl"> </span> Key flags for gatekeeping
-            </h3>
+           <h3 class="govuk-heading-m">
+              <span class="govuk-caption-xl"> </span> C110A application from <span class="blue-bold-text"> Borough of Southwark </span>received on <span class="blue-bold-text"> 20 Jun 2018</span>
+            </h3><!--<h3 class="govuk-heading-s">
+              <span class="govuk-caption-xl"> </span> Key facts for gatekeeping
+            </h3> Key flags-->
 
 			  <div > <span class="key-tag">BABY IN HOSPITAL    </span> <span class="key-tag">PHYSICAL HARM      </span> <span class="key-tag">NEGLECT  </span><span class="key-tag">CONTESTED ICO                </span></div>
+<!--style="padding: 20px 20px 0 20px; border: 5px solid  #005ea5; margin: 0px 0px 10px 0; "-->
+		
+			 <div >  <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
+  <caption class="govuk-table__caption govuk-heading-s" id="orders"> Orders
+</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Orders sought</th>
+
+
+
+      <td class="govuk-table__cell ">Care and Emergency Protection Order</td>
+
+
+    </tr>
+
+  <!--  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row"></th>
+
+
+
+           <td class="govuk-table__cell ">	Care order</td>
+
+
+
+    </tr>-->
+
+
+
+  </tbody>
+</table>
+
+<table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s" id="hearing"> Hearing needed</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    
+
+
+
+	   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Hearing needed in </th>
+
+
+
+      <td class="govuk-table__cell "> Same day
+
+
+</td>
+
+
+    </tr>
+	   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header-" scope="row" >Reason  </th>
+
+
+
+      <td class="govuk-table__cell sub-cell-"> Baby will be discharged from hospital on 21 Jun 2018
+
+
+
+
+</td>
+
+
+    </tr> <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header-" scope="row" >Hearing date requested</th>
+
+
+
+      <td class="govuk-table__cell sub-cell-">  20 Jun 2018
+
+
+</td>
+
+
+    </tr>
+	  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header sub-header-" scope="row" >Application type </th>
+
+
+
+      <td class="govuk-table__cell sub-cell-"> Contested ICO
+
+		  <br/>
+
+
+</td>
+
+
+    </tr>
+	  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Without notice?</th>
+
+
+
+      <td class="govuk-table__cell ">
+
+No
+</td>
+
+
+    </tr>
+  <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Reduced notice</th>
+
+
+
+      <td class="govuk-table__cell ">Yes <br/>Reason: Baby needs to be discharged from hospital
+</td>
+
+
+    </tr>
+   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Are respondents aware of proceedings?</th>
+
+
+
+      <td class="govuk-table__cell ">Yes
+</td>
+
+
+    </tr>
+	   <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Respondents’ views on proceedings</th>
+
+
+
+      <td class="govuk-table__cell ">They seek to care for baby in mother and baby unit or in residential assessment unit
+</td>
+
+
+    </tr>
+
+
+  </tbody>
+				 </table>
+			  
+			  <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
+
+  <caption class="govuk-table__caption govuk-heading-s" id="allocation"> Allocation proposal</caption>
+
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Applicant’s allocation proposal</th>
+
+
+
+      <td class="govuk-table__cell ">District Judge level
+</td>
+
+
+    </tr>
+
+
+
+    <tr class="govuk-table__row">
+
+
+      <th class="govuk-table__header" scope="row">Applicable
+paragraphs from the schedule to
+the President’s Guidance on the
+distribution of business</th>
+
+
+
+      <td class="govuk-table__cell ">Risk of serious physical or emotional harm arising from death of another child in family, a parent or other
+significant person. History of suspicious death of a child in the family.</td>
+
+
+    </tr>
+
+
+
+
+
+
+  </tbody>
+</table>
+			  </div>
+			  
 			  <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed" style="font-size:50%!important">
 
   <caption class="govuk-table__caption govuk-heading-s" id="child"> Child 1</caption>
@@ -679,180 +890,7 @@ Paul Farmer
 </table>
 
 
-	  <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
-
-  <caption class="govuk-table__caption govuk-heading-s" id="orders"> Orders
-</caption>
-
-
-  <tbody class="govuk-table__body">
-
-    <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Orders applied for</th>
-
-
-
-      <td class="govuk-table__cell ">Care, Interim care order, Emergency Protection Order</td>
-
-
-    </tr>
-
-    <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row"></th>
-
-
-
-           <td class="govuk-table__cell ">	Care order</td>
-
-
-
-    </tr>
-
-
-
-  </tbody>
-</table>
-
-<table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
-
-  <caption class="govuk-table__caption govuk-heading-s" id="hearing"> Hearings needed</caption>
-
-
-  <tbody class="govuk-table__body">
-
-    <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Hearing needed in next 24 hours? </th>
-
-
-
-      <td class="govuk-table__cell ">No <br/>
-
-</td>
-
-
-    </tr>
-
-
-
-	   <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Hearing needed in the next 12 days</th>
-
-
-
-      <td class="govuk-table__cell "> Yes
-
-
-</td>
-
-
-    </tr>
-	   <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header sub-header" scope="row" >Reason  </th>
-
-
-
-      <td class="govuk-table__cell sub-cell"> Baby will be discharged from hospital on 21 Jun 2018
-
-
-
-
-</td>
-
-
-    </tr> <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header sub-header" scope="row" >Hearing date requested</th>
-
-
-
-      <td class="govuk-table__cell sub-cell">  20 Jun 2018
-
-
-</td>
-
-
-    </tr>
-	  <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header sub-header" scope="row" >Application type </th>
-
-
-
-      <td class="govuk-table__cell sub-cell"> Contested ICO?
-
-		  <br/>
-
-
-</td>
-
-
-    </tr>
-	  <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Without notice?</th>
-
-
-
-      <td class="govuk-table__cell ">
-
-No
-</td>
-
-
-    </tr>
-  <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Reduced notice</th>
-
-
-
-      <td class="govuk-table__cell ">Yes <br/>Reason: Baby needs to be discharged from hospital
-</td>
-
-
-    </tr>
-   <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Are respondents aware of proceedings?</th>
-
-
-
-      <td class="govuk-table__cell ">Yes
-</td>
-
-
-    </tr>
-	   <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Respondents’ views on proceedings</th>
-
-
-
-      <td class="govuk-table__cell ">They seek to care for baby in mother and baby unit or in residential assessment unit
-</td>
-
-
-    </tr>
-
-
-  </tbody>
-</table>
+	  <
 
 
             <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
@@ -1434,51 +1472,7 @@ Supervised contact with parents to be arranged.
 
   </tbody>
 </table>
-<table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
-  <caption class="govuk-table__caption govuk-heading-s" id="allocation"> Allocation proposal</caption>
-
-
-  <tbody class="govuk-table__body">
-
-    <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Applicant’s allocation proposal</th>
-
-
-
-      <td class="govuk-table__cell ">District Judge level
-</td>
-
-
-    </tr>
-
-
-
-    <tr class="govuk-table__row">
-
-
-      <th class="govuk-table__header" scope="row">Applicable
-paragraphs from the schedule to
-the President’s Guidance on the
-distribution of business</th>
-
-
-
-      <td class="govuk-table__cell ">Risk of serious physical or emotional harm arising from death of another child in family, a parent or other
-significant person. History of suspicious death of a child in the family.</td>
-
-
-    </tr>
-
-
-
-
-
-
-  </tbody>
-</table>
 
 <table class="govuk-table govuk-!-f-16  govuk-!-mb-r8  jui-table  jui-table--fixed">
 
