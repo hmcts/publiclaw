@@ -51,7 +51,7 @@ C110a form - Children
       </span>
     </legend>
     <span id="dob-hint" class="govuk-hint">
-    For example, 31 3 1980
+    For example, 31 3 2016
   </span>
     <div class="govuk-date-input" id="dob">
       <div class="govuk-date-input__item govuk-date-input__item--day">
@@ -264,9 +264,9 @@ C110a form - Children
     Key dates for this child
   </label>
   <span id="key-dates-hint" class="govuk-hint">
-      List any events we'll need to take into account when scheduling hearings.
+      List any events HMCTS will need to take into account when scheduling hearings.
       <br>
-      For example, child starting primary school or taking GCSEs
+      For example, child starting primary school or taking GCSEs.
   </span>
   <textarea class="govuk-textarea govuk-!-width-two-thirds" id="key-dates" name="key-dates" rows="5" aria-describedby="key-dates-hint">{{ data['key-dates'] }} </textarea>
 </div>
@@ -352,7 +352,7 @@ Brief summary of care and contact plan
 
 <div class="govuk-form-group">
   <label class="govuk-label govuk-!-width-one-half" for="child-1-social-worker-phone-number">
-    <span class="govuk-label-s">   Social worker's telephone phone number</span><span class="form-hint">Mobile or landline</span>
+    <span class="govuk-label-s">   Social worker's telephone number</span><!--<span class="form-hint">Mobile or landline</span>-->
   </label>
   <input class="govuk-input govuk-!-width-one-half" id="child-1-social-worker-phone-number" name="child-1-social-worker-phone-number" type="text" value="{{ data['child-1-social-worker-phone-number'] }}">
 </div>
@@ -363,7 +363,7 @@ Brief summary of care and contact plan
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend">
 
-        Does the child have any additional needs
+        Does the child have any additional needs?
         <span id="changed-name-hint" class="govuk-hint">
     For example, child has severe autism and learning disabilities. Special needs for autism should be taken into account.
   </span>
