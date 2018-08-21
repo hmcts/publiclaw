@@ -154,7 +154,7 @@ Hearing needed
     </legend>
     <div class="govuk-radios" data-module="radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-type" type="radio" value="Contested ICO" {{ checked('hearing-type','Yes') }} data-aria-controls="conditional-hearing-type-ico-conditional-1">
+        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="hearing-type" type="radio" value="Contested ICO" {{ checked('hearing-type','Contested ICO') }} data-aria-controls="conditional-hearing-type-ico-conditional-1">
         <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
       Contested ICO
       </label>
@@ -162,9 +162,9 @@ Hearing needed
       <div class="govuk-radios__conditional" id="conditional-hearing-type-ico-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-    Reason
+   Specify reason
   </label>
-    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-24-hours-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-reason'] }}</textarea>
+    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-type-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-reason'] }}</textarea>
         </div>
       </div>
       <div class="govuk-radios__item">
@@ -176,9 +176,9 @@ Hearing needed
 		<div class="govuk-radios__conditional" id="conditional-hearing-type-urgent-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-    Reason
+   Specify reason
   </label>
-    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-24-hours-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-reason'] }}</textarea>
+    <textarea class="govuk-textarea" id="hearing-type-reason-urgent" name="hearing-type-urgent-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-urgent-reason'] }}</textarea>
         </div>
       </div>
 		<div class="govuk-radios__item">
@@ -190,9 +190,9 @@ Hearing needed
 		<div class="govuk-radios__conditional" id="conditional-hearing-type-others-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="contact-by-email">
-    Reason
+   Specify reason
   </label>
-    <textarea class="govuk-textarea" id="urgency-reason" name="hearing-24-hours-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-reason'] }}</textarea>
+    <textarea class="govuk-textarea" id="hearing-type-cmh-reason" name="hearing-type-cmh-reason" rows="3" aria-describedby="more-detail-hint">{{ data['hearing-type-cmh-reason'] }}</textarea>
         </div>
       </div>
     </div>
@@ -200,124 +200,119 @@ Hearing needed
 </div>
 
 
-
-
-
-
-
-
-
-  <div class="form-group">
-  <fieldset>
-
-    <legend>
-      <span class="body-text"> Do you need a hearing ‘without notice’? </span>
+<!--end field-->
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+      Do you need a hearing ‘without notice’? 
+      </h2>
     </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="without-notice-conditional-1" name="without-notice" type="radio" value="Yes" {{ checked('without-notice','Yes') }} data-aria-controls="conditional-without-notice-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="without-notice-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-without-notice-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="without-notice">
+            Specify reason
+          </label>
+         <textarea class="govuk-textarea" type="text" id="without-notice" name="without-notice-reason" rows="3" >{{ data['without-notice-reason'] }}</textarea>
+        </div>
 
-    <div class="multiple-choice" data-target="without-notice-yes">
-      <input id="radio-home-address" type="radio" name="without-notice" value="Yes" {{ checked('without-notice','Yes') }}>
-      <label for="radio-home-address">Yes </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="with-notice-conditional-2" name="without-notice" type="radio" value="No" {{ checked('without-notice','No') }}>
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
     </div>
-
-    <div class="panel panel-border-narrow js-hidden" id="without-notice-yes">
-
-      <!-- reason-->
-      <div class="form-group">
-
-
-
-      <legend>
-
-        <span class="body-text">Reason</span>
-      </legend>
-<textarea class="form-control" type="text" id="without-notice" name="without-notice-reason" rows="4" cols="80">{{ data['without-notice-reason'] }}</textarea>
-
-</div>
-
-
-</div>
-    <div class="multiple-choice" >
-     <input id="radio-other-address" type="radio" name="without-notice" value="No" {{ checked('without-notice','No') }}>
-      <label for="radio-other-address">No  </label>
-    </div>
-
-
   </fieldset>
 </div>
-<div class="form-group">
-<fieldset>
-
-  <legend>
-    <span class="body-text"> Do you need a hearing with reduced notice? </span>
-  </legend>
-
-  <div class="multiple-choice" data-target="reduced-notice-yes">
-    <input id="radio-home-address" type="radio" name="reduced-notice" value="Yes" {{ checked('reduced-notice','Yes') }}>
-    <label for="radio-home-address">Yes </label>
-  </div>
-
-  <div class="panel panel-border-narrow js-hidden" id="reduced-notice-yes">
-
-    <!-- reason-->
-    <div class="form-group">
-
-
-
-    <legend>
-
-      <span class="body-text">Reason </span>
+	  
+	  
+	  <!-- end field-->
+	  
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+      Do you need a hearing with reduced notice?
+      </h2>
     </legend>
-<textarea class="form-control" type="text" id="reduced-notice" name="reduced-notice-reason" rows="4" cols="80">{{ data['reduced-notice-reason'] }}</textarea>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="reduced-notice-conditional-1" name="reduced-notice" type="radio" value="Yes" {{ checked('reduced-notice','Yes') }} data-aria-controls="conditional-reduced-notice-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="reduced-notice-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reduced-notice-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="reduced-notice">
+            Specify reason
+          </label>
+         <textarea class="govuk-textarea" type="text" id="without-notice" name="reduced-notice-reason" rows="3" >{{ data['reduced-notice-reason'] }}</textarea>
+        </div>
 
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="reduced-notice-conditional-2" name="reduced-notice" type="radio" value="No" {{ checked('reduced-notice','No') }}>
+        <label class="govuk-label govuk-radios__label" for="reduced-notice-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
 </div>
-
-
-</div>
-  <div class="multiple-choice" >
-   <input id="radio-other-address" type="radio" name="reduced-notice" value="No" {{ checked('reduced-notice','No') }}>
-    <label for="radio-other-address">No  </label>
-  </div>
-
-
-</fieldset>
-</div>
-<div class="form-group">
-<fieldset>
-
-  <legend>
-    <span class="body-text"> Are respondents aware of proceedings? </span>
-  </legend>
-
-  <div class="multiple-choice" data-target="respondents-notified-yes">
-    <input id="radio-home-address" type="radio" name="respondents-notified" value="Yes" {{ checked('respondents-notified','Yes') }}>
-    <label for="radio-home-address">Yes </label>
-  </div>
-
-  <div class="panel panel-border-narrow js-hidden" id="respondents-notified-yes">
-
-    <!-- reason-->
-    <div class="form-group">
-
-
-
-    <legend>
-
-      <span class="body-text">Specify respondents’ views on proceedings</span>
+	  
+	   <!-- end field-->
+	  
+	  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+      Are respondents aware of proceedings? 
+      </h2>
     </legend>
-<textarea class="form-control" type="text" id="reduced-notice" name="respondents-notified-reason" rows="4" cols="80">{{ data['respondents-notified-reason'] }}</textarea>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="respondents-notified-conditional-1" name="respondents-notified" type="radio" value="Yes" {{ checked('respondents-notified','Yes') }} data-aria-controls="conditional-respondents-notified-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="respondents-notified-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-respondents-notified-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="respondents-notified">
+            Specify respondents’ views on proceedings
+          </label>
+         <textarea class="govuk-textarea" type="text" id="without-notice" name="respondents-notified-reason" rows="3" >{{ data['respondents-notified-reason'] }}</textarea>
+        </div>
 
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="respondents-notified-conditional-2" name="respondents-notified" type="radio" value="No" {{ checked('respondents-notified','No') }}>
+        <label class="govuk-label govuk-radios__label" for="reduced-notice-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
 </div>
+	  
 
 
-</div>
-  <div class="multiple-choice" >
-   <input id="radio-other-address" type="radio" name="respondents-notified" value="No" {{ checked('respondents-notified','No') }}>
-    <label for="radio-other-address">No  </label>
-  </div>
-
-
-</fieldset>
-</div>
 
 {% if data['change'] == "true" %}
   <input class="button" type="submit" value="Save and continue">
