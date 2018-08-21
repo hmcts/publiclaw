@@ -120,7 +120,7 @@ C110A - Respondents
 <div class="form-group">
   <label class="form-label" for="child-1-full-name">
   Place of birth
-    <span class="form-hint">(town/county/country, if known)</span>
+    <span class="form-hint">For example, town or city <!--(town/county/country, if known)--></span>
   </label>
   <input type="text" class="form-control" id="respindent-1-place-birth" name="respindent-1-place-birth" value="{{ data['respindent-1-place-birth'] }}">
 </div>
@@ -135,7 +135,7 @@ C110A - Respondents
 			<br />
 			<div class="form-group">
   <div class="">
-    <label class="form-label" for="example-phone-number">Telephone phone number <span class="form-hint">Mobile or landline</span></label>
+    <label class="form-label" for="example-phone-number">Telephone phone number <span class="form-hint"></span></label>
     <input class="form-control" id="example-phone-number" name="respondent-1-contact-number" type="text" value="{{ data['respondent-1-contact-number'] }}">
   </div>
 </div>
@@ -147,7 +147,7 @@ C110A - Respondents
 <!-- Child's Full name -->
 <div class="form-group">
   <label class="form-label" for="child-1-full-name">
-  Child's full Name
+  Child's full name
 
   </label>
   <input type="text" class="form-control" id="Father-1-full-name" name="respondent-1-child-1-full-name" type="text" value="{{ data['respondent-1-child-1-full-name'] }}">
@@ -156,8 +156,8 @@ C110A - Respondents
 			<!-- Relationship -->
 <div class="form-group">
   <label class="form-label" for="child-1-full-name">
-  Relationship to the Child
-    <span class="form-hint">Mother or father</span>
+  Relationship to the child
+    <span class="form-hint">For example, mother </span>
   </label>
   <input type="text" class="form-control" id="Mother-1-full-name" name="respondent-1-child-1-relationship" type="text" value="{{ data['respondent-1-child-1-relationship'] }}">
 </div>
@@ -167,7 +167,7 @@ C110A - Respondents
           <h1 class="heading-small">
 
           </h1>
-          <span class="body-text">Parental Responsibility</span>
+          <span class="body-text">Parental responsibility</span>
         </legend>
 
         <div class="multiple-choice" >
@@ -180,7 +180,7 @@ C110A - Respondents
         </div>
 	<div class="multiple-choice" >
           <input id="radio-parental-res-4" type="radio" name="respondent-1-child-1-parental-responsibility" value="Do not know" {{ checked('respondent-1-child-1-parental-responsibility','Do not know') }}>
-          <label for="radio-parental-res-4">Don't Know</label>
+          <label for="radio-parental-res-4">Don't know</label>
         </div>
       </div>
 
@@ -206,7 +206,7 @@ function addInput(divName){
 
           var newdiv = document.createElement('div');
 
-          newdiv.innerHTML =  "<h2 class='heading-medium'>Please note that in the real online application you will be able to add more children. This prototype is for demo purpose only.</h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Child’s full name <span class='form-hint'>As shown on the birth certificate or passport</span></label> <input type='text' class='form-control' id='child-2-full-name'>";
+          newdiv.innerHTML =  "<h2 class='heading-medium'>Please note that in the real online application you will be able to add more children. This prototype is for demo purpose only.</h2><div class='form-group'></div><label class='form-label' for='child-2-full-name'> Child’s full name <span class='form-hint'></span></label> <input type='text' class='form-control' id='child-2-full-name'>";
 
           document.getElementById(divName).appendChild(newdiv);
 
