@@ -31,9 +31,29 @@ return false;
 </script>
 <style>
 	
+   @media screen and (max-width: 760px) {
+		.app-mobile-small{font-size: 80%}
+	 	.app-mobile-hide{display: none;}
+	   .jui-casefile-page-content{ padding: 5px!important;  box-shadow: 0 #fff!important; }
+		.jui-casefile-page{ padding: 5px!important; box-shadow: 0 #fff!important; }
+
+
+}
+
+	@media screen and (max-width: 480px) {
+
+		.app-mobile-hide{display: none;}
+
+		.app-mobile-small{font-size: 80%; }
+		.app-mobile-smaller{font-size: 75%; margin-top: 10px!important; }
+		.notifications-menu-view{ display: none;}
+
+		.jui-casefile-page-content{ padding: 5px!important; box-shadow:#fff!important; }
+		.jui-casefile-page{ padding: 5px!important}
+		.floating-button{  display: block; width: 100%; margin: 2px;
+		}	
 	
-	
-	
+	}
 	
 	.notifications-container ul{
  color: #0b0c0c;
