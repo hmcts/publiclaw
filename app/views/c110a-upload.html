@@ -18,7 +18,7 @@ C110a - Documents
 <a href="javascript: history.go(-1)" class="link-back">Back</a>
 
 {% if data['change'] == "true" %}
-  <form action="c110a-review">
+  <form action="c110a-review#upload">
 
 {% else %}
 
@@ -41,18 +41,18 @@ C110a - Documents
 
        <div class="panel">
         <div class="multiple-choice">
-          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="attached" {{ checked('ammex-documents-01','Attached') }} >
+          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="Attached" {{ checked('ammex-documents-01','Attached') }} >
           <label for="Interim-supervision-order">Attached</label>
         </div>
 
 
         <div class="multiple-choice" data-target="to-follow-01">
-          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="to follow" {{ checked('ammex-documents-01','To follow') }}>
+          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="To follow" {{ checked('ammex-documents-01','To follow') }}>
           <label for="Others">To follow</label>
         </div>
         <div class="panel panel-border-narrow js-hidden" id="to-follow-01">
           <label class="form-label" for="other-2">Specify why not included and the date you will upload the document. </label>
-          <textarea class="form-control" type="text" id="other-2y" name="to-follow-01"></textarea>
+          <textarea class="form-control" type="text" id="other-2y" name="to-follow-01-reason">{{ data['to-follow-01-reason'] }} </textarea>
         </div>
 			</div><hr />
 				   <h2 class="heading-medium">  2. Social work statement and genogram
@@ -65,18 +65,18 @@ C110a - Documents
 </div>
 		 <div class="panel">
         <div class="multiple-choice">
-          <input id="ammex-d-01" name="ammex-documents-02" type="radio" value="attached" {{ checked('ammex-documents-02','Attached') }}>
+          <input id="ammex-d-01" name="ammex-documents-02" type="radio" value="Attached" {{ checked('ammex-documents-02','Attached') }}>
           <label for="Interim-supervision-order">Attached</label>
         </div>
 
 
         <div class="multiple-choice" data-target="to-follow-02">
-          <input id="ammex-d-01" name="ammex-documents-02" type="radio" value="to follow" {{ checked('ammex-documents-02','To follow') }}>
+          <input id="ammex-d-01" name="ammex-documents-02" type="radio" value="To follow" {{ checked('ammex-documents-02','To follow') }}>
           <label for="Others">To follow</label>
         </div>
         <div class="panel panel-border-narrow js-hidden" id="to-follow-02">
           <label class="form-label" for="other-2">Specify why not included and the date you will upload the document. </label>
-          <textarea class="form-control" type="text" id="other-2y" name="to-follow-02"></textarea>
+          <textarea class="form-control" type="text" id="other-2y" name="to-follow-02-reason"> {{ data['to-follow-02-reason'] }} </textarea>
         </div>
 			</div>	<hr />
 				   <h2 class="heading-medium">  3. The current assessment relating to the child or the family and friends of the child to which the social work statement refers and on which the local authority relies
@@ -89,18 +89,18 @@ C110a - Documents
 </div>
 			 <div class="panel">
         <div class="multiple-choice">
-          <input id="ammex-d-01" name="ammex-documents-03" type="radio" value="attached" {{ checked('ammex-documents-03','Attached') }}>
+          <input id="ammex-d-01" name="ammex-documents-03" type="radio" value="Attached" {{ checked('ammex-documents-03','Attached') }}>
           <label for="Interim-supervision-order">Attached</label>
         </div>
 
 
         <div class="multiple-choice" data-target="to-follow-03">
-          <input id="ammex-d-01" name="ammex-documents-03" type="radio" value="To follow" {{ checked('ammex-documents-03','to follow') }}>
+          <input id="ammex-d-01" name="ammex-documents-03" type="radio" value="To follow" {{ checked('ammex-documents-03','To follow') }}>
           <label for="Others">To follow</label>
         </div>
         <div class="panel panel-border-narrow js-hidden" id="to-follow-03">
           <label class="form-label" for="other-2">Specify why not included and the date you will upload the document. </label>
-          <textarea class="form-control" type="text" id="other-2y" name="to-follow-03"></textarea>
+          <textarea class="form-control" type="text" id="other-2y" name="to-follow-03-reason">{{ data['to-follow-03-reason'] }} </textarea>
         </div>
 			</div>
 
@@ -115,7 +115,7 @@ C110a - Documents
 </div>
 			 <div class="panel">
         <div class="multiple-choice">
-          <input id="ammex-d-01" name="ammex-documents-04" type="radio" value="Attached" {{ checked('ammex-documents-04','attached') }}>
+          <input id="ammex-d-01" name="ammex-documents-04" type="radio" value="Attached" {{ checked('ammex-documents-04','Attached') }}>
           <label for="Interim-supervision-order">Attached</label>
         </div>
 
@@ -126,7 +126,7 @@ C110a - Documents
         </div>
         <div class="panel panel-border-narrow js-hidden" id="to-follow-04">
           <label class="form-label" for="other-2">Specify why not included and the date you will upload the document. </label>
-          <textarea class="form-control" type="text" id="other-2y" name="to-follow-04"></textarea>
+          <textarea class="form-control" type="text" id="other-2y" name="to-follow-04-reason">{{ data['to-follow-reason'] }} </textarea>
         </div>
 			</div>
 		<!--Add extra documents-->	<script>
