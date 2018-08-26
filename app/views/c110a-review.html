@@ -393,6 +393,21 @@ Hearings needed
                   </a>
                 </dd>
               </div>
+		  <div>
+            <dt class="cya-question">
+                 Confidential contact details
+                </dt>
+                <dd class="cya-answer">
+                  {{ data['c8-child-1'] }}
+                  <br/>
+                    {{ data['c8-child-1-reason'] }}
+                </dd>
+                <dd class="cya-change">
+                  <a href="c110a-children?change=true">
+                    Change<span class="visually-hidden"> confidential contact details</span>
+                  </a>
+                </dd>
+              </div>
       </dl>
 
 
@@ -519,6 +534,21 @@ Hearings needed
               </a>
             </dd>
           </div>
+			 <div>
+            <dt class="cya-question">
+                 Confidential contact details
+                </dt>
+                <dd class="cya-answer">
+                  {{ data['c8-respondent-1'] }}
+                  <br/>
+                    {{ data['c8-respondent-1-reason'] }}
+                </dd>
+                <dd class="cya-change">
+                  <a href="c110a-respondent?change=true">
+                    Change<span class="visually-hidden"> confidential contact details</span>
+                  </a>
+                </dd>
+              </div>
       <!--    <div>
               <dt class="cya-question">
                     Assessments needed for this person?
@@ -603,7 +633,7 @@ Hearings needed
                   {{ data['other-1-place-birth'] }}
               </dd>
                 <dd class="cya-change">
-                  <a href="c110a-respondent?change=true">
+                  <a href="c110a-others?change=true">
                     Change <span class="visually-hidden"> other's place of birth</span>
                   </a>
                 </dd>
@@ -618,7 +648,7 @@ Hearings needed
 
               </dd>
               <dd class="cya-change">
-                <a href="c110a-respondent?change=true">
+                <a href="c110a-others?change=true">
                   Change <span class="visually-hidden"> Other's current address</span>
                 </a>
               </dd>
@@ -632,7 +662,7 @@ Hearings needed
 
               </dd>
               <dd class="cya-change">
-                <a href="c110a-respondent?change=true">
+                <a href="c110a-others?change=true">
                   Change<span class="visually-hidden"> other's contact number</span>
                 </a>
               </dd>
@@ -654,11 +684,26 @@ Hearings needed
 
               </dd>
               <dd class="cya-change">
-                <a href="c110a-respondent?change=true">
+                <a href="c110a-others?change=true">
                   Change <span class="visually-hidden"> Mother's name</span>
                 </a>
               </dd>
             </div>
+			  <div>
+            <dt class="cya-question">
+                 Confidential contact details
+                </dt>
+                <dd class="cya-answer">
+                  {{ data['c8-others-1'] }}
+                  <br/>
+                    {{ data['c8-others-1-reason'] }}
+                </dd>
+                <dd class="cya-change">
+                  <a href="c110a-others?change=true">
+                    Change<span class="visually-hidden"> confidential contact details</span>
+                  </a>
+                </dd>
+              </div>
 
         <!--  <div>
               <dt class="cya-question " >
@@ -1465,9 +1510,9 @@ arrangements
                         </dl>
 
 
-      <h2 class="heading-medium">Send your application</h2>
+      <h2 class="heading-medium">Bow send your application</h2>
 
-      <p class="text">
+      <p class="text-">
         By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.
       </p>
 
