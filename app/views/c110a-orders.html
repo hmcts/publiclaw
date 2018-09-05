@@ -33,21 +33,21 @@ C110a - Orders
   <fieldset class="govuk-fieldset">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
       <h1 class="govuk-fieldset__heading">
-        Which orders do you want to apply for?<!--What order(s) are you applying for?-->
+        Which orders and directions do you want to apply for?
       </h1>
     </legend>
     <span id="nationality-hint" class="govuk-hint">
-  Tick all that apply
+  Select all that apply
 </span>
 
     <div class="govuk-checkboxes" data-module="checkboxes">
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="order-type" name="order-type" type="checkbox" value="Care and supervision or other Part 4" data-aria-controls="conditional-order-type-1" {{ checked('order-type','Care and supervision or other Part 4') }}>
+        <input class="govuk-checkboxes__input" id="order-type" name="order-type" type="checkbox" value="Care order" data-aria-controls="conditional-order-type-1" {{ checked('order-type','Care order') }}>
         <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-1">
-      Care and supervision or other Part 4
+      Care order
       </label>
       </div>
-      <div class="govuk-checkboxes__conditional" id="conditional-order-type-1">
+     <!-- <div class="govuk-checkboxes__conditional" id="conditional-order-type-1">
 
         <div class="govuk-form-group">
           <div class="govuk-checkboxes">
@@ -93,14 +93,27 @@ Please specify
 
         </div>
 
+      </div>-->
+		
+		 <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="order-type" name="order-type" type="checkbox" value="Supervision" data-aria-controls="conditional-order-type-2" {{ checked('order-type','Supervision') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-1">
+      Supervision order
+      </label>
+      </div>
+		 <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="order-type" name="order-type" type="checkbox" value="Education supervision order" data-aria-controls="conditional-order-type-3" {{ checked('order-type','Education supervision order') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-1">
+     Education supervision order
+      </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="order-type-conditional-2" name="order-type" type="checkbox" value="Emergency protection order" data-aria-controls="conditional-order-type-2" {{ checked('order-type','Emergency protection order') }}>
+        <input class="govuk-checkboxes__input" id="order-type-conditional-2" name="order-type" type="checkbox" value="Emergency protection order" data-aria-controls="conditional-order-type-4" {{ checked('order-type','Emergency protection order') }}>
         <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-2">
         Emergency protection order
       </label>
       </div>
-      <div class="govuk-checkboxes__conditional" id="conditional-order-type-2">
+      <div class="govuk-checkboxes__conditional" id="conditional-order-type-4">
 
         <div class="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
@@ -137,6 +150,20 @@ Please specify
             </div>
       </div>
 
+    </div>
+		  <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="order-type-conditional-others-1" name="order-type" type="checkbox" value="Other" data-aria-controls="conditional-order-type-others-1" {{ checked('order-type','Other') }}>
+        <label class="govuk-label govuk-checkboxes__label" for="order-type-conditional-2">
+       Other order under part 4 of the Children Act 1989
+      </label>
+      </div>
+      <div class="govuk-checkboxes__conditional" id="conditional-order-type-others-1">
+        <div class="govuk-form-group">
+  <label class="govuk-label" for="contact-by-phone">
+Please specify
+</label>
+  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="order-type-detail-others-1" type="text" value="{{ data['order-type-detail-others-1'] }}">
+</div>
     </div>
   </fieldset>
 </div>

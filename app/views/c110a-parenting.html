@@ -30,7 +30,7 @@ C110a - Parenting
 			 <h1 class="govuk-heading-xl">
         Factors affecting parenting
         </h1>
-<h2 class="govuk-heading-m"> Is there evidence of any of the following?</h2>
+<h2 class="govuk-heading-m"> Is there evidence of any of the following affecting ability to parent?</h2>
 
 			
 	  <div class="govuk-form-group">
@@ -147,7 +147,43 @@ C110a - Parenting
     </div>
   </fieldset>
 </div><!-- end field-->
-			
+			<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+ Any other
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="domestic-violence-conditional-1" name="any-other" type="radio" value="Yes" {{ checked('any-other','Yes') }} data-aria-controls="conditional-any-other-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="any-other-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-any-other-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="any-other-issues">
+            Provide details
+			  <span id="changed-name-hint" class="govuk-hint">
+    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
+    </span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="any-other" name="any-other-details" rows="3" >{{ data['any-other-details'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="any-other-conditional-2" name="any-other" type="radio" value="No" {{ checked('any-other','No') }}>
+        <label class="govuk-label govuk-radios__label" for="any-other-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div><!-- end field-->
 
 
 		<br/>

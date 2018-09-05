@@ -53,7 +53,7 @@ C110a Form
           Order details
           </dt>
           <dd class="cya-answer">
-            {{ data['order-type-detail'] }} {{ data['order-emergency-protection-order-others'] }} {{ data['orders-care-supervision-others'] }}
+            {{ data['order-type-detail'] }} {{ data['order-emergency-protection-order-others'] }} {{ data['orders-care-supervision-others'] }}  {{ data['order-type-detail-others-1'] }} 
 
           </dd>
           <dd class="cya-change">
@@ -342,6 +342,7 @@ Hearings needed
           </dt>
           <dd class="cya-answer">
 			   {{ data['child-1-father-parental-responsibility'] }}
+			  
 
           </dd>
           <dd class="cya-change">
@@ -520,13 +521,13 @@ Hearings needed
             </dd>
           </div>
 
-  		  <div>
+  		  <div style="padding:0 0 0 15px!important;">
             <dt class="cya-question " >
              Parental responsibility
             </dt>
             <dd class="cya-answer">
   			   {{ data['respondent-1-child-1-parental-responsibility'] }}
-
+{{ data['respondent-1-child-1-parental-responsibility-reason'] }}
             </dd>
             <dd class="cya-change">
               <a href="c110a-respondent?change=true">
@@ -534,6 +535,23 @@ Hearings needed
               </a>
             </dd>
           </div>
+			
+			
+			 <div style="padding:0 0 0 15px!important;">
+            <dt class="cya-question " >
+         Litigation capacity issues
+            </dt>
+            <dd class="cya-answer">
+  			   {{ data['lc-respondent-1'] }}
+{{ data['lc-respondent-1-reason'] }}
+            </dd>
+            <dd class="cya-change">
+              <a href="c110a-respondent?change=true">
+                Change<span class="visually-hidden"> litigation capacity</span>
+              </a>
+            </dd>
+          </div>
+			
 			 <div>
             <dt class="cya-question">
                  Confidential contact details
@@ -923,7 +941,19 @@ Hearings needed
             </a>
           </dd>
         </div>
-
+  <div>
+          <dt class="cya-question">
+         Solicitor’s reference
+          </dt>
+          <dd class="cya-answer">
+             {{ data['la-solicitor-ref'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="c110a-applicant?change=true">
+              Change<span class="visually-hidden"> Solicitor’s Reference</span>
+            </a>
+          </dd>
+        </div>
 
 
 
@@ -974,14 +1004,14 @@ Hearings needed
             <dl class="govuk-check-your-answers cya-questions-short">
               <div>
                 <dt class="cya-question">
-                  Physical harm through neglect
+                 Physical harm including non-accidental injury
                 </dt>
                 <dd class="cya-answer">
                   {{ data['physical-harm'] }}
                 </dd>
                 <dd class="cya-change">
                   <a href="c110a-risk-harm?change=true">
-                    Change<span class="visually-hidden">   Physical harm</span>
+                    Change<span class="visually-hidden">   physical harm including non-accidental injury</span>
                   </a>
                 </dd>
               </div>
@@ -1096,7 +1126,19 @@ Hearings needed
                                 </a>
                               </dd>
                             </div>
-
+  <div>
+                              <dt class="cya-question">
+                                Any other
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['any-other'] }}<br/>{{ data['any-other-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="c110a-parenting?change=true">
+                                  Change<span class="visually-hidden"> any other</span>
+                                </a>
+                              </dd>
+                            </div>
 
 
 
@@ -1145,20 +1187,7 @@ Hearings needed
                         <!--   * `cya-questions-long` for long questions -->
                         <!--   * none for single group of q&a -->
                         <dl class="govuk-check-your-answers cya-questions-short">
-                          <div>
-                            <dt class="cya-question">
-                              International element
-                            </dt>
-                            <dd class="cya-answer">
-                              {{ data['international-element'] }} <br/>{{ data['international-element-details'] }}
-                            </dd>
-                            <dd class="cya-change">
-                              <a href="c110a-international?change=true">
-                                Change<span class="visually-hidden">   international element</span>
-                              </a>
-                            </dd>
-                          </div>
-
+                          
                             <div>
                               <dt class="cya-question">
                               Anyone in genogram who lives outside the UK and has been assessed a possible carer
@@ -1185,6 +1214,20 @@ Hearings needed
                                 </a>
                               </dd>
                             </div>
+							<div>
+                            <dt class="cya-question">
+                              Any issues with the jurisdiction
+                            </dt>
+                            <dd class="cya-answer">
+                              {{ data['international-element'] }} <br/>{{ data['international-element-details'] }}
+                            </dd>
+                            <dd class="cya-change">
+                              <a href="c110a-international?change=true">
+                                Change<span class="visually-hidden">   any issues with the jurisdiction</span>
+                              </a>
+                            </dd>
+                          </div>
+
                             <div>
                               <dt class="cya-question">
                               Proceedings outside the UK
@@ -1198,6 +1241,19 @@ Hearings needed
                                 </a>
                               </dd>
                             </div>
+							  <div>
+                              <dt class="cya-question">
+                              Has, or should, a government authority in another country been involved
+                              </dt>
+                              <dd class="cya-answer">
+                                {{ data['another-country'] }}<br/>{{ data['another-country-details'] }}
+                              </dd>
+                              <dd class="cya-change">
+                                <a href="c110a-international?change=true">
+                                  Change<span class="visually-hidden"> has, or should, a government authority in another country been involved</span>
+                                </a>
+                              </dd>
+                            </div>
 
 
 
@@ -1207,7 +1263,7 @@ Hearings needed
                         </dl>
                         <h2 class="heading-medium" id="attending">
 
-                      Attending the court
+                      Attending hearing
 
 
                         </h2>

@@ -2,7 +2,7 @@
 
 {% block page_title %}
 
-C110a - Attending the court
+C110a - Attending hearing
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,10 @@ C110a - Attending the court
     <div class="column-full column-minimum">
 
 
+
 <a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+
 
 {% if data['change'] == "true" %}
   <form action="c110a-review#attending">
@@ -24,266 +27,137 @@ C110a - Attending the court
   <form action="c110a">
 {% endif %}
 
-			 <h1 class="govuk-heading-xl">
-        Attending the court
-        </h1>
-	  
-	  
-	  
+<h1 class="govuk-fieldset__legend govuk-fieldset__legend--l">Attending hearing </h1>
 	  
 	  
 	  <div class="govuk-form-group">
   <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
-      <h2 class="govuk-fieldset__heading">
-      Is an interpreter required for any party?
-      </h2>
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading-m">
+              Does anyone in the case need extra support to help them take part in a hearing?
+      </h2><span id="orders-hint" class="govuk-hint">
+  Select all that apply
+</span>
     </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="interpreter-conditional-1" name="interpreter" type="radio" value="Yes" {{ checked('interpreter','Yes') }} data-aria-controls="conditional-interpreter-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="reduced-notice-conditional-1">
-          Yes
+    <div class="govuk-checkboxes" data-module="checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="attending-hearing-conditional-1" name="attending-hearing" type="checkbox" value="Interpreter" {{ checked('attending-hearing','Interpreter') }} data-aria-controls="conditional-attending-hearing-conditional-1">
+        <label class="govuk-label govuk-checkboxes__label" for="attending-hearing-conditional-1">
+         Interpreter <span id="orders-hint" class="govuk-hint">
+ Including British Sign Language
+</span>
         </label>
       </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-interpreter-conditional-1">
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-attending-hearing-conditional-1">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="interpreter">
-            Provide details
-			  <span id="changed-name-hint" class="govuk-hint">
-     Give the names of everyone who needs help and the language they require (including dialect, if applicable)
-    </span>
+          <label class="govuk-label" for="contact-by-email">
+            Give details including person, language and dialect
+			  <span id="orders-hint" class="govuk-hint">
+ For example, Mother needs Benaadir Somali interpreter
+</span>
           </label>
-         <textarea class="govuk-textarea" type="text" id="interpreter" name="interpreter-details" rows="3" >{{ data['interpreter-details'] }}</textarea>
+         <textarea class="govuk-textarea" type="text" id="another-country" name="interpreter-details" rows="3" >{{ data['interpreter-details'] }}</textarea>
         </div>
 
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="interpreter-conditional-2" name="interpreter" type="radio" value="No" {{ checked('interpreter','No') }}>
-        <label class="govuk-label govuk-radios__label" for="interpreter-conditional-2">
-          No
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="attending-hearing-conditional-2" name="attending-hearing" type="checkbox" value="Welsh" {{ checked('attending-hearing','Welsh') }} data-aria-controls="conditional-attending-hearing-conditional-2">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+         Spoken or written Welsh
         </label>
       </div>
-      
-      
-    </div>
-  </fieldset>
-</div><!-- end field-->
-	  
-	  
-	  <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
-      <h2 class="govuk-fieldset__heading">
-    Is an intermediary required ?
-      </h2>
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="intermediary-conditional-1" name="intermediary" type="radio" value="Yes" {{ checked('intermediary','Yes') }} data-aria-controls="conditional-intermediary-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="intermediary-conditional-1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-intermediary-conditional-1">
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-attending-hearing-conditional-2">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="intermediary">
-            Provide details
-			  <span id="changed-name-hint" class="govuk-hint">
-    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
-    </span>
+          <label class="govuk-label" for="contact-by-phone">
+             Give details
           </label>
-         <textarea class="govuk-textarea" type="text" id="intermediary" name="intermediary-details" rows="3" >{{ data['intermediary-details'] }}</textarea>
+			<textarea class="govuk-textarea" type="text" id="another-country" name="welsh-details" rows="3" >{{ data['welsh-details'] }}</textarea>
+          
         </div>
 
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="intermediary-conditional-2" name="intermediary" type="radio" value="No" {{ checked('intermediary','No') }}>
-        <label class="govuk-label govuk-radios__label" for="intermediary-conditional-2">
-          No
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="attending-hearing-conditional-3" name="attending-hearing" type="checkbox" value="Intermediary" {{ checked('attending-hearing','Intermediary') }} data-aria-controls="conditional-attending-hearing-conditional-3">
+        <label class="govuk-label govuk-checkboxes__label" for="attending-hearing-conditional-3">
+            Intermediary
         </label>
       </div>
-      
-      
-    </div>
-  </fieldset>
-</div><!-- end field-->
-	  
-	  
-	  <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
-      <h2 class="govuk-fieldset__heading">
-  Do you know if any person has any litigation capacity issues?
-      </h2>
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="litigation-capacity-issues-conditional-1" name="litigation-capacity-issues" type="radio" value="Yes" {{ checked('litigation-capacity-issues','Yes') }} data-aria-controls="conditional-litigation-capacity-issues-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="litigation-capacity-issues-conditional-1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-litigation-capacity-issues-conditional-1">
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-attending-hearing-conditional-3">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="litigation-capacity-issues">
-            Provide details
-			  <span id="changed-name-hint" class="govuk-hint">
-    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
-    </span>
+          <label class="govuk-label" for="contact-by-text">
+            Give details
           </label>
-         <textarea class="govuk-textarea" type="text" id="litigation-capacity-issues" name="litigation-capacity-issues-details" rows="3" >{{ data['litigation-capacity-issues-details'] }}</textarea>
+         <textarea class="govuk-textarea" type="text" id="another-country" name="intermediary-details" rows="3" >{{ data['intermediary-details'] }}</textarea>
+          
         </div>
 
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="litigation-capacity-issues-conditional-2" name="litigation-capacity-issues" type="radio" value="No" {{ checked('litigation-capacity-issues','No') }}>
-        <label class="govuk-label govuk-radios__label" for="litigation-capacity-issues-conditional-2">
-          No
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="attending-hearing-conditional-3" name="attending-hearing" type="checkbox" value="Disability needing special assistance or facilities" {{ checked('attending-hearing','Disability needing special assistance or facilities') }} data-aria-controls="conditional-attending-hearing-conditional-4">
+        <label class="govuk-label govuk-checkboxes__label" for="attending-hearing-conditional-4">
+            Disability needing special assistance or facilities
         </label>
       </div>
-      
-      
-    </div>
-  </fieldset>
-</div><!-- end field-->
-	  
-	  
- <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
-      <h2 class="govuk-fieldset__heading">
-  Do you know if any person has any learning disability issues?
-      </h2>
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="learning-disability-issues-conditional-1" name="learning-disability" type="radio" value="Yes" {{ checked('learning-disability','Yes') }} data-aria-controls="conditional-learning-disability-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="learning-disability-conditional-1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-learning-disability-conditional-1">
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-attending-hearing-conditional-4">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="learning-disability">
-            Provide details
-			  <span id="changed-name-hint" class="govuk-hint">
-    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
-    </span>
+          <label class="govuk-label" for="contact-by-text">
+            Give details
           </label>
-         <textarea class="govuk-textarea" type="text" id="learning-disability" name="learning-disability-details" rows="3" >{{ data['learning-disability-details'] }}</textarea>
+         <textarea class="govuk-textarea" type="text" id="another-country" name="disability-details" rows="3" >{{ data['disability-details'] }}</textarea>
+          
         </div>
 
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="learning-disability-issues-conditional-2" name="learning-disability" type="radio" value="No" {{ checked('learning-disability','No') }}>
-        <label class="govuk-label govuk-radios__label" for="learning-disability-conditional-2">
-          No
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="attending-hearing-conditional-3" name="attending-hearing" type="checkbox" value="Security" {{ checked('attending-hearing','Security') }} data-aria-controls="conditional-attending-hearing-conditional-5">
+        <label class="govuk-label govuk-checkboxes__label" for="attending-hearing-conditional-5">
+            Security
         </label>
       </div>
-      
-      
-    </div>
-  </fieldset>
-</div><!-- end field-->
-	  
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-attending-hearing-conditional-5">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+            Give details <span class="govuk-hint">For example, domestic violence history meaning a separate waiting room is needed</span>
+          </label>
+         <textarea class="govuk-textarea" type="text" id="another-country" name="security-details" rows="3" >{{ data['security-details'] }}</textarea>
+          
+        </div>
+
+      </div>
 		
-  
- <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
-      <h2 class="govuk-fieldset__heading">
-  Will any party need to use spoken or written Welsh during the course of the proceedings?
-      </h2>
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="learning-disability-issues-conditional-1" name="welsh" type="radio" value="Yes" {{ checked('welsh','Yes') }} data-aria-controls="conditional-welsh-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="welsh-conditional-1">
-          Yes
+		<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="attending-hearing-conditional-3" name="attending-hearing" type="checkbox" value="Something else" {{ checked('attending-hearing','Something else') }} data-aria-controls="conditional-attending-hearing-conditional-6">
+        <label class="govuk-label govuk-checkboxes__label" for="attending-hearing-conditional-6">
+            Something else
         </label>
       </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-welsh-conditional-1">
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-attending-hearing-conditional-6">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="welsh">
-            Provide details
-			  <span id="changed-name-hint" class="govuk-hint">
-    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
-    </span>
+          <label class="govuk-label" for="contact-by-text">
+            Give details
           </label>
-         <textarea class="govuk-textarea" type="text" id="welsh" name="welsh-details" rows="3" >{{ data['welsh-details'] }}</textarea>
+         <textarea class="govuk-textarea" type="text" id="another-country" name="something-else-details" rows="3" >{{ data['something-else-details'] }}</textarea>
+          
         </div>
 
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="welsh-conditional-2" name="welsh" type="radio" value="No" {{ checked('welsh','No') }}>
-        <label class="govuk-label govuk-radios__label" for="welsh-conditional-2">
-          No
-        </label>
-      </div>
-      
-      
+		
     </div>
   </fieldset>
-</div><!-- end field-->
-	  
-		  
- <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
-      <h2 class="govuk-fieldset__heading">
-Do you know whether the court
-needs to make any special
-arrangements for any one
-attending court?
-		    <span id="changed-name-hint" class="govuk-hint">
-    For example, providing a separate waiting room or other security requirements
-    </span>
-      </h2>
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="security-conditional-1" name="security" type="radio" value="Yes" {{ checked('security','Yes') }} data-aria-controls="conditional-security-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="security-conditional-1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-security-conditional-1">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="security">
-            Provide details
-			  <span id="changed-name-hint" class="govuk-hint">
-    <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
-    </span>
-          </label>
-         <textarea class="govuk-textarea" type="text" id="security" name="security-details" rows="3" >{{ data['security-details'] }}</textarea>
-        </div>
-
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="security-conditional-2" name="security" type="radio" value="No" {{ checked('security','No') }}>
-        <label class="govuk-label govuk-radios__label" for="security-conditional-2">
-          No
-        </label>
-      </div>
-      
-      
-    </div>
-  </fieldset>
-</div><!-- end field-->
+</div>
 	  
 
 
 
-		<br/>
 
-    {% if data['change'] == "true" %}
-      <input class="button" type="submit" value="Save and continue">
 
-    {% else %}
+  {% if data['change'] == "true" %}
+    <input class="button" type="submit" value="Save and continue">
 
-    <input class="button" type="submit" value="Save">
-    {% endif %}
+  {% else %}
+
+  <input class="button" type="submit" value="Save">
+  {% endif %}
 
 </form>
 
@@ -291,7 +165,6 @@ attending court?
 
 
 
-	  <hr />
 
 
 
