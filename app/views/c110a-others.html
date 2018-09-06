@@ -162,8 +162,56 @@ C110a - Others who should be given notice
   </label>
   <input type="text" class="form-control" id="Mother-1-full-name" name="other-1-child-1-relationship" type="text" value="{{ data['other-1-child-1-relationship'] }}">
 </div>
+				
+				<h2 class="govuk-heading-m">
+      Parental responsibility
+      </h2>
+			<!--	<p class="govuk-hint">Respondents should have parental responsibility for the child or children.</p>-->
+				
+				<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+      Does this person have parental responsibility?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="other-1-child-1-parental-responsibility" name="other-1-child-1-parental-responsibility" type="radio" value="Yes" {{ checked('other-1-child-1-parental-responsibility','Yes') }} >
+        <label class="govuk-label govuk-radios__label" for="other-1-child-1-parental-responsibility-conditional-1">
+          Yes
+        </label>
+      </div>
+      
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="other-1-child-1-parental-responsibility-conditional-2" name="other-1-child-1-parental-responsibility" type="radio" value="No" {{ checked('other-1-child-1-parental-responsibility','No') }} data-aria-controls="conditional-other-1-child-1-parental-responsibility-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="other-1-child-1-parental-responsibility-conditional-2">
+          No
+        </label>
+      </div>
+		<div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other-1-child-1-parental-responsibility-conditional-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="other-1-child-1-parental-responsibility">
+            Give details
+          </label>
+			<span id="other-hint" class="govuk-hint">
+ For example, paternity hasn’t been proven
+ 
+</span>
+         <textarea class="govuk-textarea" type="text" id="other-1-child-1-parental-responsibility" name="other-1-child-1-parental-responsibility-reason" rows="3" >{{ data['other-1-child-1-parental-responsibility-reason'] }}</textarea>
+        </div>
 
-<div class="panel-border-narrow panel ">
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+	  
+	  
+	  <!-- end field-->
+
+<!--<div class="panel-border-narrow panel ">
         <legend>
           <h3 class="form-label">
 Parental responsibility
@@ -183,46 +231,9 @@ Parental responsibility
           <input id="radio-parental-res-4" type="radio" name="other-1-child-1-parental-responsibility" value="Do not know" {{ checked('other-1-child-1-parental-responsibility','Do not know') }}>
           <label for="radio-parental-res-4">Don't know</label>
         </div>
-      </div>
+      </div>-->
 
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
-      <h2 class="govuk-fieldset__heading">
-      Do you need content details hidden from other parties? 
-      </h2>
-    </legend>
-    <div class="govuk-radios" data-module="radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="c8-others-1" name="c8-others-1" type="radio" value="Yes" {{ checked('c8-others-1','Yes') }} data-aria-controls="conditional-c8-others-1-conditional-1">
-        <label class="govuk-label govuk-radios__label" for="c8-others-1-conditional-1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-c8-others-1-conditional-1">
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="c8-others-1">
-            Specify reason
-          </label>
-         <textarea class="govuk-textarea" type="text" id="c8-others-1" name="c8-others-1-reason" rows="3" >{{ data['c8-others-1-reason'] }}</textarea>
-        </div>
-
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="c8-others-1-conditional-2" name="c8-others-1" type="radio" value="No" {{ checked('c8-others-1','No') }}>
-        <label class="govuk-label govuk-radios__label" for="c8-others-1-conditional-2">
-          No
-        </label>
-      </div>
-      
-      
-    </div>
-  </fieldset>
-</div>
-	  
-	  
-	  <!-- end field-->
 
 
 
@@ -268,9 +279,87 @@ function addInput(divName){
      </div>
      <input type="button" class="button" value="Add child" onClick="addInput('dynamicInput');">
 
+<hr> 
+				
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+      Do you need content details hidden from other parties? 
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="c8-others-1" name="c8-others-1" type="radio" value="Yes" {{ checked('c8-others-1','Yes') }} data-aria-controls="conditional-c8-others-1-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="c8-others-1-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-c8-others-1-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="c8-others-1">
+            Specify reason
+          </label>
+         <textarea class="govuk-textarea" type="text" id="c8-others-1" name="c8-others-1-reason" rows="3" >{{ data['c8-others-1-reason'] }}</textarea>
+        </div>
 
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="c8-others-1-conditional-2" name="c8-others-1" type="radio" value="No" {{ checked('c8-others-1','No') }}>
+        <label class="govuk-label govuk-radios__label" for="c8-others-1-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+	  
+	  
+	  <!-- end field-->
+ <h2 class="govuk-heading-m">
+    Ability to take part in proceedings
+      </h2>	
 
-<br/><br/>
+				<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--">
+      <h2 class="govuk-fieldset__heading">
+     Does this respondent have any issues with litigation capacity?
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="lc-respondent-1" name="lc-respondent-1" type="radio" value="Yes" {{ checked('lc-respondent-1','Yes') }} data-aria-controls="conditional-lc-respondent-1-conditional-1">
+        <label class="govuk-label govuk-radios__label" for="lc-respondent-1-conditional-1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-lc-respondent-1-conditional-1">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="lc-respondent-1">
+           Give details, including referrals to or assessments by the Adult Learning Disability team or other health service, including outcomes
+          </label>
+         <textarea class="govuk-textarea" type="text" id="lc-respondent-1" name="lc-respondent-1-reason" rows="3" >{{ data['lc-respondent-1-reason'] }}</textarea>
+        </div>
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="lc-respondent-1-conditional-2" name="lc-respondent-1" type="radio" value="No" {{ checked('lc-respondent-1','No') }}>
+        <label class="govuk-label govuk-radios__label" for="lc-respondent-1-conditional-2">
+          No
+        </label>
+      </div>
+      
+      
+    </div>
+  </fieldset>
+</div>
+	  
+	  
+	  <!-- end field-->
+
 
 			<div class="form-group inline" style="display: none;">
 

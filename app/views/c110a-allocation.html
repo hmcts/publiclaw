@@ -48,6 +48,32 @@ C110a - International element
       </label>
       </div>
       <div class="govuk-radios__conditional" id="conditional-previous-proceedings-yes">
+		  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <!--<h1 class="govuk-fieldset__heading">
+        Have you changed your name?
+      </h1>-->
+    </legend>
+    <!--<span id="changed-name-hint" class="govuk-hint">
+      This includes changing your last name or spelling your name differently.
+    </span>-->
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name-1">
+          Ongoing 
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          Pervious
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
         <div class="govuk-form-group">
           <label class="govuk-label" for="yes">
     Case number
@@ -77,6 +103,14 @@ C110a - International element
     Judge
   </label>
           <input class="govuk-input govuk-!-width-one-third" id="yes" name="judge" type="text" value="{{ data['judge'] }}">
+        </div>
+		  
+		  <div class="govuk-form-group">
+          <label class="govuk-label" for="Yes">
+    Children subject to proceedings <proceedings></proceedings>
+  </label>
+			  <textarea class="govuk-textarea" type="text" id="children-previous-proceeings" name="children-previous-proceeings" rows="3" >{{ data['children-previous-proceeings'] }}</textarea>
+          
         </div>
 		  <div class="govuk-form-group">
           <label class="govuk-label" for="Yes">
