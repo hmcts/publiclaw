@@ -326,6 +326,9 @@ function addInput(divName){
       <h2 class="govuk-fieldset__heading">
       Is an interpreter required ?
       </h2>
+		<span id="orders-hint" class="govuk-hint">
+ Including British Sign Language
+</span>
     </legend>
     <div class="govuk-radios" data-module="radios">
       <div class="govuk-radios__item">
@@ -337,9 +340,9 @@ function addInput(divName){
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-interpreter-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="interpreter">
-            Provide details
+           Give details including language and dialect
 			  <span id="changed-name-hint" class="govuk-hint">
-     Give the names of everyone who needs help and the language they require (including dialect, if applicable)
+      For example, Mother needs Benaadir Somali interpreter
     </span>
           </label>
          <textarea class="govuk-textarea" type="text" id="interpreter" name="interpreter-details" rows="3" >{{ data['interpreter-details'] }}</textarea>
@@ -376,7 +379,7 @@ function addInput(divName){
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-intermediary-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="intermediary">
-            Provide details
+            Give details
 			  <span id="changed-name-hint" class="govuk-hint">
     <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
     </span>
@@ -451,7 +454,7 @@ function addInput(divName){
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-welsh-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="welsh">
-            Provide details
+            Give details
 			  <span id="changed-name-hint" class="govuk-hint">
     <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
     </span>
@@ -482,7 +485,8 @@ needs to make any special
 arrangements for 
 attending court?
 		    <span id="changed-name-hint" class="govuk-hint">
-    For example, providing a separate waiting room or other security requirements
+    <!--For example, providing a separate waiting room or other security requirements-->
+				For example, domestic violence history meaning a separate waiting room is needed
     </span>
       </h2>
     </legend>
@@ -496,7 +500,7 @@ attending court?
       <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-security-conditional-1">
         <div class="govuk-form-group">
           <label class="govuk-label" for="security">
-            Provide details
+            Give details
 			  <span id="changed-name-hint" class="govuk-hint">
     <!-- Give the names of everyone who needs help and the language they require(including dialect, if applicable)-->
     </span>
